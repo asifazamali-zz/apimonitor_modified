@@ -1,0 +1,3 @@
+V/DroidBox(  736): Landroid/util/Log;->v(Ljava/lang/String;=test | Ljava/lang/String;=testing)I=14
+V/DroidBox(  736): Lcom/example/asif/helloworld/MainActivity;->findViewById(I=2131427414)Landroid/view/View;=android.support.v7.widget.AppCompatEditText@414de610
+V/DroidBox(  736): Landroid/util/Log;->v(Ljava/lang/String;=test | Ljava/lang/String;=cdafaahgaa)I=17
