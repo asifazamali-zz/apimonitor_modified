@@ -44,6 +44,8 @@ parser.add_argument('-v, --version', action='version',
                     version='DroidBoxAPIMonitor v0.1beta')
 parser.add_argument('filename', type=str, 
                     help='path of APK file')
+parser.add_argument('packagename', type=str, 
+                    help='path of package name')
 
 args = parser.parse_args()
 apk_name = os.path.basename(args.filename)
@@ -101,7 +103,7 @@ call(args=['java', '-jar', baksmali_jar,
 	   '-b', '-o', smalidir, dexpath])
 s = smali.SmaliTree(level, smalidir)
 
-s = mo.inject(s, level)
+s = mo.inject(s, level,args.packagename)
 s.save(new_smalidir)
 
 call(args=['java', '-jar', smali_jar,

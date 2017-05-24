@@ -1,11 +1,13 @@
 #!/bin/bash
 if [ -z "$1" ]
 then
-				echo "Provide apk path"
+				echo "./run.sh apk-path"
 				exit 1
 fi
-./apimonitor.py $1
-echo $1
+#getting package name from manifest file 
+pac_name=$(java -jar APKParser.jar $1|grep -o "package[[:space:]]*"='[[:space:]]*[^ ]\+'|cut -d "=" -f2|sed -e 's/[[:space:]]*//'|sed 's/\./\//g'|sed 's/\"/L/'|sed 's/\"//')
+echo $1 $pac_name
+./apimonitor.py $1 $pac_name>a.txt
 dir=$(dirname "$1")
 f=$(basename "$1")
 f_name="${f%.*}"

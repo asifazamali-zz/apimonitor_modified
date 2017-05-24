@@ -2,6 +2,15 @@
 
 
 
+#Location
+Landroid/location/LocationManager;->requestLocationUpdates
+Landroid/location/LocationManager;->getLastKnownLocation
+
+#Toast
+Landroid/widget/Toast;->makeText
+
+
+
 #EditText
 Landroid/app/Activity;->findViewById
 

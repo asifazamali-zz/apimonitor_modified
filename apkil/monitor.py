@@ -174,8 +174,9 @@ class APIMonitor(object):
         self.android_api.load(data_path)
         return level
 
-    def inject(self, smali_tree, level):
+    def inject(self, smali_tree, level,package):
         # get a copy of smali tree
+        print "package",package
         st = copy.deepcopy(smali_tree)
 
         # load api database
@@ -335,9 +336,33 @@ class APIMonitor(object):
                         if self.api_dict.has_key(smd):
                             method_type = METHOD_TYPE_BY_OPCODE[on]
                             new_on = OPCODE_MAP[on]
+                            #print "package",package,c.name
+                            if package in c.name:
+                                segs = md.rsplit("->", 1)
+                                print "removing method and rewriting class",package,c.name,md
+                                if segs[0] in self.stub_classes:
+                                    method_name = segs[1]
+                                    print method_name
+                                    # print self.stub_classes[segs[0]].methods
+                                    for mn in self.stub_classes[segs[0]].methods:
+                                        print mn.name
+                                        if mn.name in method_name:
+                                             print "removing..."
+                                             self.stub_classes[segs[0]].methods.remove(mn)
+                                    # print self.stub_classes[segs[0]].methods
+                                
+                                #if segs[0] in self.stub_classes:
+                                    #removeMethod(method_type,self.stub_classes[segs[0]],md)
+                                    #self.stub_classes[segs[0]].methods.remove(md)
+                                #if md in self.method_map.keys():
+                                    #print "method_map",self.method_map[md]
+                                self.method_map.pop(md,None)
+                                #print "keys",self.stub_classes.keys()
+                                # if c in self.stub_classes.keys():
+                                #     self.stub_classes[c].methods.pop(md,None)
                             if not self.method_map.has_key(md):
                                 #print "adding new_stub_method class_name %s method_name %s"%(c.name,md)
-                                self.add_stub_method(on, md,c,m.descriptor)
+                                self.add_stub_method(on, md,c,m.descriptor,package)
                             if method_type == "constructor":
                                 insn_m = copy.deepcopy(insn)
                                 insn_m.obj.replace(new_on, \
@@ -376,7 +401,7 @@ class APIMonitor(object):
                             method_type = METHOD_TYPE_BY_OPCODE[on]
                             new_on = OPCODE_MAP[on]
                             if not self.method_map.has_key(md):
-                                self.add_stub_method(on, md,c,m.descriptor)
+                                self.add_stub_method(on, md,c,m.descriptor,package)
                             if method_type == "constructor":
                                 insn_m = copy.deepcopy(insn)
                                 insn_m.obj.replace(new_on, \
@@ -422,17 +447,26 @@ class APIMonitor(object):
 
         st.add_class(self.helper)
         print "Done!"
-
+        #print "stub_classes.methods",self.stub_classes.methods
+        # print "stub_classes",self.stub_classes
+        # print "method_map",self.method_map
+        # print "api_dict",self.api_dict
+        # print "api_name_dict",self.api_name_dict
+        # print "class_map",self.class_map
         return st
 
-    def add_stub_method(self, on, m,parent_class,parent_method):
+    def add_stub_method(self, on, m,parent_class,parent_method,package):
         #segs = m.split(':', 1)
         #method_type = segs[0]
         #m = segs[1]
         #print on,m
         method_type = METHOD_TYPE_BY_OPCODE[on]
         segs = m.rsplit("->", 1)
-        # print on,m,method_type,segs
+        #print on,m,method_type,segs
+        #print parent_class.name, segs[0]
+        # if package in parent_class.name:
+        #     print "removing",parent_class.name,package,segs[0]
+        #     self.stub_classes.pop(segs[0],None)
         if self.stub_classes.has_key(segs[0]):
             stub_class = self.stub_classes[segs[0]]
         else:
@@ -1049,5 +1083,6 @@ Ljava/lang/Exception;->printStackTrace()V"))
         self.method_map[m] = "L" + PKG_PREFIX + "/" + segs[0][1:] + "->" + \
                 method.get_desc()
 
+    
 
 
