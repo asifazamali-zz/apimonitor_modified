@@ -339,7 +339,7 @@ class APIMonitor(object):
                             #print "package",package,c.name
                             if package in c.name:
                                 segs = md.rsplit("->", 1)
-                                print "removing method and rewriting class",package,c.name,md
+                                #print "removing method and rewriting class",package,c.name,md
                                 if segs[0] in self.stub_classes:
                                     method_name = segs[1]
                                     print method_name
@@ -347,7 +347,7 @@ class APIMonitor(object):
                                     for mn in self.stub_classes[segs[0]].methods:
                                         print mn.name
                                         if mn.name in method_name:
-                                             print "removing..."
+                                             #print "removing..."
                                              self.stub_classes[segs[0]].methods.remove(mn)
                                     # print self.stub_classes[segs[0]].methods
                                 
@@ -544,7 +544,7 @@ v%d, Ljava/lang/StringBuilder;" % ri))
 {v%d}, Ljava/lang/StringBuilder;-><init>()V" % ri))
 
         method.add_insn(InsnNode("const-string v%d,\"%s(\"" % \
-                                 (ri + 1, parent_class.name+"->"+parent_method+"->"+(m.split('(', 1)[0]).split('->')[1])))
+                                 (ri + 1, parent_class.name+"->"+parent_method+"->"+(m.split('(', 1)[0]))))
         append_i = InsnNode("invoke-virtual \
 {v%d, v%d}, Ljava/lang/StringBuilder;->\
 append(Ljava/lang/String;)Ljava/lang/StringBuilder;" % \
@@ -681,7 +681,7 @@ v%d, Ljava/lang/StringBuilder;" % ri))
 {v%d}, Ljava/lang/StringBuilder;-><init>()V" % ri))
 
         method.add_insn(InsnNode("const-string v%d,\"%s(\"" % \
-                                 (ri + 1, parent_class.name+"->"+parent_method+"->"+(m.split('(', 1)[0]).split('->')[1])))
+                                 (ri + 1, parent_class.name+"->"+parent_method+"->"+(m.split('(', 1)[0]))))
         append_i = InsnNode("invoke-virtual \
 {v%d, v%d}, Ljava/lang/StringBuilder;->\
 append(Ljava/lang/String;)Ljava/lang/StringBuilder;" % \
@@ -812,7 +812,7 @@ v%d, Ljava/lang/StringBuilder;" % ri))
 {v%d}, Ljava/lang/StringBuilder;-><init>()V" % ri))
 
         method.add_insn(InsnNode("const-string v%d,\"%s(\"" % \
-                                 (ri + 1, parent_class.name+"->"+parent_method+"->"+(m.split('(', 1)[0]).split('->')[1])))
+                                 (ri + 1, parent_class.name+"->"+parent_method+"->"+(m.split('(', 1)[0]))))
         append_i = InsnNode("invoke-virtual \
 {v%d, v%d}, Ljava/lang/StringBuilder;->\
 append(Ljava/lang/String;)Ljava/lang/StringBuilder;" % \
@@ -965,7 +965,7 @@ v%d, Ljava/lang/StringBuilder;" % ri))
 {v%d}, Ljava/lang/StringBuilder;-><init>()V" % ri))
 
         method.add_insn(InsnNode("const-string v%d,\"%s(\"" % \
-                                 (ri + 1,parent_class.name+"->"+parent_method+"->"+(m.split('(', 1)[0]).split('->')[1])))
+                                 (ri + 1,parent_class.name+"->"+parent_method+"->"+(m.split('(', 1)[0]))))
         #print parent_class.name
         append_i = InsnNode("invoke-virtual \
 {v%d, v%d}, Ljava/lang/StringBuilder;->\
