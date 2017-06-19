@@ -5,6 +5,11 @@
 #Location
 Landroid/location/LocationManager;->requestLocationUpdates
 Landroid/location/LocationManager;->getLastKnownLocation
+Landroid/location/LocationListener;->onLocationChanged
+Landroid/location/LocationListener;->onProviderDisabled
+Landroid/location/LocationListener;->onProviderEnabled
+Landroid/location/LocationListener;->onStatusChanged
+
 
 #Toast
 Landroid/widget/Toast;->makeText

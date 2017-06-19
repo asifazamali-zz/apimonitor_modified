@@ -1,0 +1,2095 @@
+/usr/lib/jvm/java-8-openjdk-amd64/bin/java -javaagent:/opt/intellij-idea-community/lib/idea_rt.jar=41887:/opt/intellij-idea-community/bin -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/home/asif/MTP/Experiments/soot-infoflow-android/out/production/soot-infoflow-android:/home/asif/MTP/Experiments/soot-infoflow-android/lib/junit.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/org.hamcrest.core_1.3.0.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/axml-2.0.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/AXMLPrinter2.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/slf4j-api-1.7.5.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/slf4j-simple-1.7.5.jar:/home/asif/Downloads/soot-infoflow.jar:/home/asif/Downloads/soot-trunk.jar:/home/asif/Downloads/slf4j-simple-1.7.5.jar:/home/asif/Downloads/slf4j-api-1.7.5.jar:/home/asif/Downloads/axml-2.0.jar:/home/asif/Downloads/commons-cli-1.3.1.jar Main -o output -i HelloWorld.apk -sdk android.jar -debug
+May 31, 2017 8:44:13 PM Main.java.Config init
+INFO: initializing...
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/asif/MTP/Experiments/soot-infoflow-android/lib/slf4j-simple-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/asif/Downloads/soot-trunk.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/asif/Downloads/slf4j-simple-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
+[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.139349602 seconds
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: android.app.Notification$DecoratedCustomViewStyle is a phantom class!
+Warning: android.app.Notification$DecoratedMediaCustomViewStyle is a phantom class!
+Warning: android.app.Notification$MessagingStyle$Message is a phantom class!
+Warning: android.app.Notification$MessagingStyle is a phantom class!
+Warning: android.app.SharedElementCallback$OnSharedElementsReadyListener is a phantom class!
+Warning: android.graphics.drawable.Animatable2$AnimationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationResult is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$CryptoObject is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager is a phantom class!
+Warning: android.media.browse.MediaBrowser$ItemCallback is a phantom class!
+Warning: android.view.SearchEvent is a phantom class!
+Warning: android.view.PointerIcon is a phantom class!
+Warning: android.widget.ThemedSpinnerAdapter is a phantom class!
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
+[main] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.example.asif.gpstracking.MainActivity $r1;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label1:
+        if $i0 == 0 goto label3;
+
+        $r1 = new com.example.asif.gpstracking.MainActivity;
+
+        specialinvoke $r1.<com.example.asif.gpstracking.MainActivity: void <init>()>();
+
+        if $i0 == 1 goto label3;
+
+        virtualinvoke $r1.<com.example.asif.gpstracking.MainActivity: void onCreate(android.os.Bundle)>(null);
+
+     label2:
+        if $i0 == 4 goto label3;
+
+        if $i0 == 5 goto label2;
+
+     label3:
+        if $i0 == 7 goto label1;
+
+        return;
+    }
+
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Collecting callbacks in DEFAULT mode...
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.1 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.0 seconds.
+[Spark] Solution found in 0.0 seconds.
+Callback analysis done.
+Warning: ImageButton is a phantom class!
+Warning: com.example.asif.gpstracking.ImageButton is a phantom class!
+Warning: android.view.ImageButton is a phantom class!
+Found 1 layout controls in file res/layout-v11/notification_media_action.xml
+Found 2 layout controls in file res/layout-v11/notification_media_cancel_action.xml
+Warning: RelativeLayout is a phantom class!
+Warning: com.example.asif.gpstracking.RelativeLayout is a phantom class!
+Warning: android.view.RelativeLayout is a phantom class!
+Warning: LinearLayout is a phantom class!
+Warning: com.example.asif.gpstracking.LinearLayout is a phantom class!
+Warning: android.view.LinearLayout is a phantom class!
+Warning: ImageView is a phantom class!
+Warning: com.example.asif.gpstracking.ImageView is a phantom class!
+Warning: android.view.ImageView is a phantom class!
+Found 3 layout controls in file res/layout-v11/notification_template_big_media.xml
+Warning: FrameLayout is a phantom class!
+Warning: com.example.asif.gpstracking.FrameLayout is a phantom class!
+Warning: android.view.FrameLayout is a phantom class!
+Could not find layout class DateTimeView
+Warning: DateTimeView is a phantom class!
+Warning: com.example.asif.gpstracking.DateTimeView is a phantom class!
+Warning: android.view.DateTimeView is a phantom class!
+Warning: android.widget.DateTimeView is a phantom class!
+Warning: android.webkit.DateTimeView is a phantom class!
+Warning: Chronometer is a phantom class!
+Warning: com.example.asif.gpstracking.Chronometer is a phantom class!
+Warning: android.view.Chronometer is a phantom class!
+Warning: TextView is a phantom class!
+Warning: com.example.asif.gpstracking.TextView is a phantom class!
+Warning: android.view.TextView is a phantom class!
+Found 4 layout controls in file res/layout-v11/notification_template_big_media_custom.xml
+Found 5 layout controls in file res/layout-v11/notification_template_big_media_narrow.xml
+Found 6 layout controls in file res/layout-v11/notification_template_big_media_narrow_custom.xml
+Warning: ViewStub is a phantom class!
+Warning: com.example.asif.gpstracking.ViewStub is a phantom class!
+Could not find layout class DateTimeView
+Found 7 layout controls in file res/layout-v16/notification_template_custom_big.xml
+Found 8 layout controls in file res/layout-v17/abc_action_mode_close_item_material.xml
+Warning: ScrollView is a phantom class!
+Warning: com.example.asif.gpstracking.ScrollView is a phantom class!
+Warning: android.view.ScrollView is a phantom class!
+Warning: com.example.asif.gpstracking.android.support.v7.widget.ButtonBarLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.ButtonBarLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.ButtonBarLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ButtonBarLayout is a phantom class!
+Warning: Button is a phantom class!
+Warning: com.example.asif.gpstracking.Button is a phantom class!
+Warning: android.view.Button is a phantom class!
+Could not find layout class android.support.v7.widget.ButtonBarLayout
+Could not find layout class android.support.v4.widget.Space
+Warning: com.example.asif.gpstracking.android.support.v4.widget.Space is a phantom class!
+Warning: android.view.android.support.v4.widget.Space is a phantom class!
+Warning: android.widget.android.support.v4.widget.Space is a phantom class!
+Warning: android.webkit.android.support.v4.widget.Space is a phantom class!
+Found 9 layout controls in file res/layout-v17/abc_alert_dialog_button_bar_material.xml
+Warning: com.example.asif.gpstracking.android.support.v7.widget.DialogTitle is a phantom class!
+Warning: android.view.android.support.v7.widget.DialogTitle is a phantom class!
+Warning: android.widget.android.support.v7.widget.DialogTitle is a phantom class!
+Warning: android.webkit.android.support.v7.widget.DialogTitle is a phantom class!
+Found 10 layout controls in file res/layout-v17/abc_alert_dialog_title_material.xml
+Warning: com.example.asif.gpstracking.android.support.v7.widget.FitWindowsLinearLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.FitWindowsLinearLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.FitWindowsLinearLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.FitWindowsLinearLayout is a phantom class!
+Could not find layout class android.support.v7.widget.DialogTitle
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.widget.FitWindowsLinearLayout
+Found 11 layout controls in file res/layout-v17/abc_dialog_title_material.xml
+Found 12 layout controls in file res/layout-v17/abc_popup_menu_header_item_layout.xml
+Warning: com.example.asif.gpstracking.android.support.v7.view.menu.ListMenuItemView is a phantom class!
+Warning: android.view.android.support.v7.view.menu.ListMenuItemView is a phantom class!
+Warning: android.widget.android.support.v7.view.menu.ListMenuItemView is a phantom class!
+Warning: android.webkit.android.support.v7.view.menu.ListMenuItemView is a phantom class!
+Could not find layout class android.support.v7.view.menu.ListMenuItemView
+Found 13 layout controls in file res/layout-v17/abc_popup_menu_item_layout.xml
+Warning: view is a phantom class!
+Warning: com.example.asif.gpstracking.view is a phantom class!
+Warning: android.view.view is a phantom class!
+Warning: android.widget.view is a phantom class!
+Warning: android.webkit.view is a phantom class!
+Could not find layout class view
+Could not find layout class view
+Found 14 layout controls in file res/layout-v17/abc_search_view.xml
+Found 14 layout controls in file res/layout-v17/abc_select_dialog_material.xml
+Found 15 layout controls in file res/layout-v17/notification_action.xml
+Found 16 layout controls in file res/layout-v17/notification_action_tombstone.xml
+Found 17 layout controls in file res/layout-v17/notification_template_big_media.xml
+Found 18 layout controls in file res/layout-v17/notification_template_big_media_custom.xml
+Found 19 layout controls in file res/layout-v17/notification_template_big_media_narrow.xml
+Found 20 layout controls in file res/layout-v17/notification_template_big_media_narrow_custom.xml
+Found 21 layout controls in file res/layout-v17/notification_template_custom_big.xml
+Found 22 layout controls in file res/layout-v17/notification_template_lines_media.xml
+Could not find layout class DateTimeView
+Could not find layout class DateTimeView
+Could not find layout class DateTimeView
+Could not find layout class DateTimeView
+Found 23 layout controls in file res/layout-v17/notification_template_media.xml
+Found 24 layout controls in file res/layout-v17/notification_template_media_custom.xml
+Warning: CheckedTextView is a phantom class!
+Warning: com.example.asif.gpstracking.CheckedTextView is a phantom class!
+Warning: android.view.CheckedTextView is a phantom class!
+Could not find layout class android.support.v7.widget.ActionBarOverlayLayout
+Could not find layout class android.support.v7.widget.ActionBarContainer
+Could not find layout class android.support.v7.widget.Toolbar
+Could not find layout class android.support.v7.widget.ActionBarContextView
+Found 25 layout controls in file res/layout-v17/select_dialog_multichoice_material.xml
+Found 26 layout controls in file res/layout-v17/select_dialog_singlechoice_material.xml
+Warning: com.example.asif.gpstracking.android.support.v7.widget.ActionBarOverlayLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.ActionBarOverlayLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.ActionBarOverlayLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ActionBarOverlayLayout is a phantom class!
+Warning: com.example.asif.gpstracking.android.support.v7.widget.ActionBarContainer is a phantom class!
+Warning: android.view.android.support.v7.widget.ActionBarContainer is a phantom class!
+Warning: android.widget.android.support.v7.widget.ActionBarContainer is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ActionBarContainer is a phantom class!
+Warning: com.example.asif.gpstracking.android.support.v7.widget.Toolbar is a phantom class!
+Warning: android.view.android.support.v7.widget.Toolbar is a phantom class!
+Warning: android.widget.android.support.v7.widget.Toolbar is a phantom class!
+Warning: android.webkit.android.support.v7.widget.Toolbar is a phantom class!
+Warning: com.example.asif.gpstracking.android.support.v7.widget.ActionBarContextView is a phantom class!
+Warning: android.view.android.support.v7.widget.ActionBarContextView is a phantom class!
+Warning: android.widget.android.support.v7.widget.ActionBarContextView is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ActionBarContextView is a phantom class!
+Found 26 layout controls in file res/layout-v21/abc_screen_toolbar.xml
+Could not find layout class android.support.v7.widget.ButtonBarLayout
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.view.menu.ActionMenuItemView
+Found 27 layout controls in file res/layout-v21/notification_action.xml
+Found 28 layout controls in file res/layout-v21/notification_action_tombstone.xml
+Found 29 layout controls in file res/layout-v21/notification_template_custom_big.xml
+Found 30 layout controls in file res/layout-v21/notification_template_icon_group.xml
+Found 31 layout controls in file res/layout-v22/abc_alert_dialog_button_bar_material.xml
+Found 32 layout controls in file res/layout/abc_action_bar_title_item.xml
+Found 33 layout controls in file res/layout/abc_action_bar_up_container.xml
+Found 34 layout controls in file res/layout/abc_action_bar_view_list_nav_layout.xml
+Warning: com.example.asif.gpstracking.android.support.v7.view.menu.ActionMenuItemView is a phantom class!
+Warning: android.view.android.support.v7.view.menu.ActionMenuItemView is a phantom class!
+Warning: android.widget.android.support.v7.view.menu.ActionMenuItemView is a phantom class!
+Warning: android.webkit.android.support.v7.view.menu.ActionMenuItemView is a phantom class!
+Found 34 layout controls in file res/layout/abc_action_menu_item_layout.xml
+Warning: com.example.asif.gpstracking.android.support.v7.widget.ActionMenuView is a phantom class!
+Warning: android.view.android.support.v7.widget.ActionMenuView is a phantom class!
+Warning: android.widget.android.support.v7.widget.ActionMenuView is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ActionMenuView is a phantom class!
+Found 34 layout controls in file res/layout/abc_action_menu_layout.xml
+Could not find layout class android.support.v7.widget.ActionMenuView
+Could not find layout class android.support.v7.widget.ActionBarContextView
+Found 34 layout controls in file res/layout/abc_action_mode_bar.xml
+Could not find layout class view
+Could not find layout class android.support.v7.widget.ButtonBarLayout
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.widget.AlertDialogLayout
+Found 35 layout controls in file res/layout/abc_action_mode_close_item_material.xml
+Found 36 layout controls in file res/layout/abc_activity_chooser_view.xml
+Found 37 layout controls in file res/layout/abc_activity_chooser_view_list_item.xml
+Found 38 layout controls in file res/layout/abc_alert_dialog_button_bar_material.xml
+Warning: com.example.asif.gpstracking.android.support.v7.widget.AlertDialogLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.AlertDialogLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.AlertDialogLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.AlertDialogLayout is a phantom class!
+Warning: View is a phantom class!
+Warning: com.example.asif.gpstracking.View is a phantom class!
+Could not find layout class android.support.v4.widget.NestedScrollView
+Warning: com.example.asif.gpstracking.android.support.v4.widget.NestedScrollView is a phantom class!
+Warning: android.view.android.support.v4.widget.NestedScrollView is a phantom class!
+Warning: android.widget.android.support.v4.widget.NestedScrollView is a phantom class!
+Warning: android.webkit.android.support.v4.widget.NestedScrollView is a phantom class!
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.widget.DialogTitle
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.widget.FitWindowsLinearLayout
+Could not find layout class android.support.v7.view.menu.ExpandedMenuView
+Found 39 layout controls in file res/layout/abc_alert_dialog_material.xml
+Found 40 layout controls in file res/layout/abc_alert_dialog_title_material.xml
+Found 41 layout controls in file res/layout/abc_dialog_title_material.xml
+Warning: com.example.asif.gpstracking.android.support.v7.view.menu.ExpandedMenuView is a phantom class!
+Warning: android.view.android.support.v7.view.menu.ExpandedMenuView is a phantom class!
+Warning: android.widget.android.support.v7.view.menu.ExpandedMenuView is a phantom class!
+Warning: android.webkit.android.support.v7.view.menu.ExpandedMenuView is a phantom class!
+Found 41 layout controls in file res/layout/abc_expanded_menu_layout.xml
+Warning: CheckBox is a phantom class!
+Warning: com.example.asif.gpstracking.CheckBox is a phantom class!
+Warning: android.view.CheckBox is a phantom class!
+Could not find layout class android.support.v7.view.menu.ListMenuItemView
+Found 42 layout controls in file res/layout/abc_list_menu_item_checkbox.xml
+Found 43 layout controls in file res/layout/abc_list_menu_item_icon.xml
+Found 44 layout controls in file res/layout/abc_list_menu_item_layout.xml
+Warning: RadioButton is a phantom class!
+Warning: com.example.asif.gpstracking.RadioButton is a phantom class!
+Warning: android.view.RadioButton is a phantom class!
+Could not find layout class android.support.v7.view.menu.ListMenuItemView
+Could not find layout class android.support.v7.widget.ContentFrameLayout
+Could not find layout class android.support.v7.widget.FitWindowsLinearLayout
+Could not find layout class android.support.v7.widget.ViewStubCompat
+Could not find layout class android.support.v7.widget.FitWindowsFrameLayout
+Could not find layout class android.support.v7.widget.ViewStubCompat
+Could not find layout class android.support.v7.widget.ActionBarOverlayLayout
+Could not find layout class android.support.v7.widget.ActionBarContainer
+Could not find layout class android.support.v7.widget.Toolbar
+Could not find layout class android.support.v7.widget.ActionBarContextView
+Found 45 layout controls in file res/layout/abc_list_menu_item_radio.xml
+Found 46 layout controls in file res/layout/abc_popup_menu_header_item_layout.xml
+Found 47 layout controls in file res/layout/abc_popup_menu_item_layout.xml
+Warning: com.example.asif.gpstracking.android.support.v7.widget.ContentFrameLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.ContentFrameLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.ContentFrameLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ContentFrameLayout is a phantom class!
+Found 47 layout controls in file res/layout/abc_screen_content_include.xml
+Warning: com.example.asif.gpstracking.android.support.v7.widget.ViewStubCompat is a phantom class!
+Warning: android.view.android.support.v7.widget.ViewStubCompat is a phantom class!
+Warning: android.widget.android.support.v7.widget.ViewStubCompat is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ViewStubCompat is a phantom class!
+Found 47 layout controls in file res/layout/abc_screen_simple.xml
+Warning: com.example.asif.gpstracking.android.support.v7.widget.FitWindowsFrameLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.FitWindowsFrameLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.FitWindowsFrameLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.FitWindowsFrameLayout is a phantom class!
+Found 47 layout controls in file res/layout/abc_screen_simple_overlay_action_mode.xml
+Found 47 layout controls in file res/layout/abc_screen_toolbar.xml
+Could not find layout class view
+Could not find layout class view
+Could not find layout class DateTimeView
+Found 48 layout controls in file res/layout/abc_search_dropdown_item_icons_2line.xml
+Found 49 layout controls in file res/layout/abc_search_view.xml
+Found 49 layout controls in file res/layout/abc_select_dialog_material.xml
+Found 50 layout controls in file res/layout/activity_main.xml
+Found 51 layout controls in file res/layout/notification_action.xml
+Found 52 layout controls in file res/layout/notification_action_tombstone.xml
+Found 53 layout controls in file res/layout/notification_template_custom_big.xml
+Found 54 layout controls in file res/layout/notification_template_icon_group.xml
+Found 55 layout controls in file res/layout/notification_template_lines_media.xml
+Found 56 layout controls in file res/layout/notification_template_media.xml
+Could not find layout class DateTimeView
+Could not find layout class DateTimeView
+Found 57 layout controls in file res/layout/notification_template_media_custom.xml
+Found 58 layout controls in file res/layout/notification_template_part_chronometer.xml
+Found 58 layout controls in file res/layout/notification_template_part_time.xml
+Found 59 layout controls in file res/layout/select_dialog_item_material.xml
+Found 60 layout controls in file res/layout/select_dialog_multichoice_material.xml
+Found 61 layout controls in file res/layout/select_dialog_singlechoice_material.xml
+Found 62 layout controls in file res/layout/support_simple_spinner_dropdown_item.xml
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: android.app.Notification$DecoratedCustomViewStyle is a phantom class!
+Warning: android.app.Notification$DecoratedMediaCustomViewStyle is a phantom class!
+Warning: android.app.Notification$MessagingStyle$Message is a phantom class!
+Warning: android.app.Notification$MessagingStyle is a phantom class!
+Warning: android.app.SharedElementCallback$OnSharedElementsReadyListener is a phantom class!
+Warning: android.graphics.drawable.Animatable2$AnimationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationResult is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$CryptoObject is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager is a phantom class!
+Warning: android.media.browse.MediaBrowser$ItemCallback is a phantom class!
+Warning: android.view.SearchEvent is a phantom class!
+Warning: android.view.PointerIcon is a phantom class!
+Warning: android.widget.ThemedSpinnerAdapter is a phantom class!
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.view.View
+[main] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.example.asif.gpstracking.MainActivity $r1;
+        com.example.asif.gpstracking.MainActivity$1 $r2;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label1:
+        if $i0 == 0 goto label7;
+
+        $r1 = new com.example.asif.gpstracking.MainActivity;
+
+        specialinvoke $r1.<com.example.asif.gpstracking.MainActivity: void <init>()>();
+
+        if $i0 == 1 goto label7;
+
+        virtualinvoke $r1.<com.example.asif.gpstracking.MainActivity: void onCreate(android.os.Bundle)>(null);
+
+     label2:
+        if $i0 == 3 goto label6;
+
+     label3:
+        if $i0 == 4 goto label4;
+
+        staticinvoke <com.example.asif.gpstracking.MainActivity: void <clinit>()>();
+
+     label4:
+        $r2 = new com.example.asif.gpstracking.MainActivity$1;
+
+        specialinvoke $r2.<com.example.asif.gpstracking.MainActivity$1: void <init>(com.example.asif.gpstracking.MainActivity)>($r1);
+
+        if $i0 == 5 goto label5;
+
+        virtualinvoke $r2.<com.example.asif.gpstracking.MainActivity$1: void onClick(android.view.View)>(null);
+
+     label5:
+        if $i0 == 6 goto label3;
+
+     label6:
+        if $i0 == 7 goto label2;
+
+        if $i0 == 8 goto label7;
+
+        if $i0 == 9 goto label2;
+
+     label7:
+        if $i0 == 11 goto label1;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.1 seconds.
+[Spark] Solution found in 0.1 seconds.
+Running incremental callback analysis for 1 components...
+Incremental callback analysis done.
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: android.app.Notification$DecoratedCustomViewStyle is a phantom class!
+Warning: android.app.Notification$DecoratedMediaCustomViewStyle is a phantom class!
+Warning: android.app.Notification$MessagingStyle$Message is a phantom class!
+Warning: android.app.Notification$MessagingStyle is a phantom class!
+Warning: android.app.SharedElementCallback$OnSharedElementsReadyListener is a phantom class!
+Warning: android.graphics.drawable.Animatable2$AnimationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationResult is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$CryptoObject is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager is a phantom class!
+Warning: android.media.browse.MediaBrowser$ItemCallback is a phantom class!
+Warning: android.view.SearchEvent is a phantom class!
+Warning: android.view.PointerIcon is a phantom class!
+Warning: android.widget.ThemedSpinnerAdapter is a phantom class!
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.view.View
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.DialogInterface
+[main] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.example.asif.gpstracking.MainActivity $r1;
+        com.example.asif.gpstracking.MainActivity$1 $r2;
+        com.example.asif.gpstracking.GPSTracker $r3, $r5;
+        com.example.asif.gpstracking.GPSTracker$2 $r4;
+        com.example.asif.gpstracking.GPSTracker$1 $r6;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label1:
+        if $i0 == 0 goto label9;
+
+        $r1 = new com.example.asif.gpstracking.MainActivity;
+
+        specialinvoke $r1.<com.example.asif.gpstracking.MainActivity: void <init>()>();
+
+        if $i0 == 1 goto label9;
+
+        virtualinvoke $r1.<com.example.asif.gpstracking.MainActivity: void onCreate(android.os.Bundle)>(null);
+
+     label2:
+        if $i0 == 3 goto label8;
+
+     label3:
+        $r2 = new com.example.asif.gpstracking.MainActivity$1;
+
+        specialinvoke $r2.<com.example.asif.gpstracking.MainActivity$1: void <init>(com.example.asif.gpstracking.MainActivity)>($r1);
+
+        if $i0 == 4 goto label4;
+
+        virtualinvoke $r2.<com.example.asif.gpstracking.MainActivity$1: void onClick(android.view.View)>(null);
+
+     label4:
+        if $i0 == 5 goto label5;
+
+        staticinvoke <com.example.asif.gpstracking.MainActivity: void <clinit>()>();
+
+     label5:
+        $r3 = new com.example.asif.gpstracking.GPSTracker;
+
+        specialinvoke $r3.<com.example.asif.gpstracking.GPSTracker: void <init>(android.content.Context)>($r1);
+
+        $r4 = new com.example.asif.gpstracking.GPSTracker$2;
+
+        specialinvoke $r4.<com.example.asif.gpstracking.GPSTracker$2: void <init>(com.example.asif.gpstracking.GPSTracker)>($r3);
+
+        if $i0 == 6 goto label6;
+
+        virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker$2: void onClick(android.content.DialogInterface,int)>(null, 0);
+
+     label6:
+        $r5 = new com.example.asif.gpstracking.GPSTracker;
+
+        specialinvoke $r5.<com.example.asif.gpstracking.GPSTracker: void <init>(android.content.Context)>($r1);
+
+        $r6 = new com.example.asif.gpstracking.GPSTracker$1;
+
+        specialinvoke $r6.<com.example.asif.gpstracking.GPSTracker$1: void <init>(com.example.asif.gpstracking.GPSTracker)>($r5);
+
+        if $i0 == 7 goto label7;
+
+        virtualinvoke $r6.<com.example.asif.gpstracking.GPSTracker$1: void onClick(android.content.DialogInterface,int)>(null, 0);
+
+     label7:
+        if $i0 == 8 goto label3;
+
+     label8:
+        if $i0 == 9 goto label2;
+
+        if $i0 == 10 goto label9;
+
+        if $i0 == 11 goto label2;
+
+     label9:
+        if $i0 == 13 goto label1;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.5 seconds.
+[Spark] Solution found in 0.5 seconds.
+Running incremental callback analysis for 0 components...
+Incremental callback analysis done.
+Found 5 callback methods for 1 components
+Found {res/layout/notification_action.xml=[2131427416 - android.widget.ImageView, 2131427415 - android.widget.LinearLayout, 2131427417 - android.widget.TextView], res/layout/notification_template_icon_group.xml=[2131427372 - android.widget.ImageView], res/layout/notification_template_custom_big.xml=[2131427429 - android.widget.ImageView, 2131427428 - android.widget.TextView, 2131427423 - android.widget.LinearLayout, -1 - android.widget.LinearLayout, 2131427372 - android.widget.ImageView, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout-v17/notification_template_media_custom.xml=[2131427420 - android.widget.LinearLayout, 2131427428 - android.widget.TextView, 2131427437 - android.widget.ImageView, 2131427423 - android.widget.LinearLayout, 2131427421 - android.widget.LinearLayout, 2131427427 - android.widget.Chronometer, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout-v17/select_dialog_singlechoice_material.xml=[16908308 - android.widget.CheckedTextView], res/layout-v11/notification_media_cancel_action.xml=[2131427419 - android.widget.ImageButton], res/layout-v17/notification_template_big_media_narrow_custom.xml=[2131427420 - android.widget.RelativeLayout, 2131427428 - android.widget.TextView, 2131427423 - android.widget.LinearLayout, 2131427421 - android.widget.LinearLayout, 2131427372 - android.widget.ImageView, 2131427427 - android.widget.Chronometer, 2131427422 - android.widget.ImageView, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout-v17/notification_action.xml=[2131427416 - android.widget.ImageView, 2131427415 - android.widget.LinearLayout, 2131427417 - android.widget.TextView], res/layout-v17/notification_template_custom_big.xml=[2131427429 - android.widget.ImageView, 2131427427 - android.view.ViewStub, 2131427428 - android.widget.TextView, 2131427431 - android.widget.LinearLayout, 2131427423 - android.widget.LinearLayout, -1 - android.widget.LinearLayout, 2131427426 - android.view.ViewStub, 2131427430 - android.widget.FrameLayout, 2131427372 - android.widget.ImageView, 2131427422 - android.widget.ImageView, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout-v21/notification_action_tombstone.xml=[2131427416 - android.widget.ImageView, 2131427415 - android.widget.LinearLayout, 2131427417 - android.widget.TextView], res/layout/abc_action_bar_view_list_nav_layout.xml=[-1 - android.widget.LinearLayout], res/layout/abc_popup_menu_item_layout.xml=[2131427373 - android.widget.TextView, -1 - android.widget.RelativeLayout, 2131427391 - android.widget.TextView, 2131427393 - android.widget.ImageView], res/layout-v11/notification_media_action.xml=[2131427418 - android.widget.ImageButton], res/layout-v16/notification_template_custom_big.xml=[2131427429 - android.widget.ImageView, 2131427427 - android.view.ViewStub, 2131427428 - android.widget.TextView, 2131427431 - android.widget.LinearLayout, 2131427423 - android.widget.LinearLayout, -1 - android.widget.LinearLayout, 2131427426 - android.view.ViewStub, 2131427430 - android.widget.FrameLayout, 2131427372 - android.widget.ImageView, 2131427422 - android.widget.ImageView, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout-v21/notification_action.xml=[2131427416 - android.widget.ImageView, 2131427415 - android.widget.LinearLayout, 2131427417 - android.widget.TextView], res/layout/notification_template_part_chronometer.xml=[2131427427 - android.widget.Chronometer], res/layout/abc_alert_dialog_button_bar_material.xml=[2131427374 - android.widget.ScrollView, 16908313 - android.widget.Button, 16908314 - android.widget.Button, 16908315 - android.widget.Button], res/layout/abc_dialog_title_material.xml=[2131427373 - android.widget.TextView], res/layout/abc_alert_dialog_title_material.xml=[2131427385 - android.widget.LinearLayout, 16908294 - android.widget.ImageView, 2131427386 - android.widget.LinearLayout], res/layout-v17/notification_template_big_media_custom.xml=[2131427420 - android.widget.RelativeLayout, 2131427428 - android.widget.TextView, 2131427423 - android.widget.LinearLayout, 2131427421 - android.widget.LinearLayout, 2131427427 - android.widget.Chronometer, 2131427422 - android.widget.ImageView, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout/notification_template_media_custom.xml=[2131427420 - android.widget.LinearLayout, 2131427428 - android.widget.TextView, 2131427437 - android.widget.ImageView, 2131427423 - android.widget.LinearLayout, 2131427421 - android.widget.LinearLayout, 2131427427 - android.widget.Chronometer, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout-v17/abc_alert_dialog_button_bar_material.xml=[2131427374 - android.widget.ScrollView, 16908313 - android.widget.Button, 16908314 - android.widget.Button, 16908315 - android.widget.Button], res/layout/select_dialog_singlechoice_material.xml=[16908308 - android.widget.CheckedTextView], res/layout/select_dialog_item_material.xml=[16908308 - android.widget.TextView], res/layout-v17/abc_action_mode_close_item_material.xml=[2131427366 - android.widget.ImageView], res/layout/select_dialog_multichoice_material.xml=[16908308 - android.widget.CheckedTextView], res/layout/abc_alert_dialog_material.xml=[2131427382 - android.view.View, 2131427384 - android.widget.FrameLayout, 2131427383 - android.widget.FrameLayout, 2131427378 - android.view.View, 2131427377 - android.widget.FrameLayout, -1 - android.widget.LinearLayout, 16908299 - android.widget.TextView], res/layout-v17/notification_template_media.xml=[2131427420 - android.widget.LinearLayout, 2131427437 - android.widget.ImageView, 2131427421 - android.widget.LinearLayout], res/layout-v17/abc_popup_menu_header_item_layout.xml=[16908310 - android.widget.TextView, -1 - android.widget.FrameLayout], res/layout/abc_action_mode_close_item_material.xml=[2131427366 - android.widget.ImageView], res/layout/abc_search_dropdown_item_icons_2line.xml=[16908295 - android.widget.ImageView, 16908296 - android.widget.ImageView, 16908309 - android.widget.TextView, 16908308 - android.widget.TextView, 2131427401 - android.widget.ImageView, -1 - android.widget.RelativeLayout], res/layout-v17/notification_action_tombstone.xml=[2131427416 - android.widget.ImageView, 2131427415 - android.widget.LinearLayout, 2131427417 - android.widget.TextView], res/layout-v17/abc_search_view.xml=[2131427407 - android.widget.LinearLayout, 2131427405 - android.widget.LinearLayout, 2131427406 - android.widget.ImageView, 2131427403 - android.widget.TextView, 2131427409 - android.widget.ImageView, 2131427412 - android.widget.ImageView, 2131427411 - android.widget.ImageView, 2131427402 - android.widget.LinearLayout, 2131427404 - android.widget.ImageView, 2131427410 - android.widget.LinearLayout], res/layout-v17/notification_template_big_media.xml=[2131427420 - android.widget.RelativeLayout, 2131427421 - android.widget.LinearLayout, 2131427422 - android.widget.ImageView], res/layout-v17/abc_popup_menu_item_layout.xml=[2131427373 - android.widget.TextView, -1 - android.widget.RelativeLayout, 2131427391 - android.widget.TextView, 2131427393 - android.widget.ImageView], res/layout-v22/abc_alert_dialog_button_bar_material.xml=[2131427374 - android.widget.ScrollView, 16908313 - android.widget.Button, 16908314 - android.widget.Button, 16908315 - android.widget.Button], res/layout-v11/notification_template_big_media_narrow_custom.xml=[2131427420 - android.widget.RelativeLayout, 2131427428 - android.widget.TextView, 2131427423 - android.widget.LinearLayout, 2131427421 - android.widget.LinearLayout, 2131427372 - android.widget.ImageView, 2131427427 - android.widget.Chronometer, 2131427422 - android.widget.ImageView, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout-v17/abc_alert_dialog_title_material.xml=[2131427385 - android.widget.LinearLayout, 16908294 - android.widget.ImageView, 2131427386 - android.widget.LinearLayout], res/layout/abc_list_menu_item_layout.xml=[2131427373 - android.widget.TextView, -1 - android.widget.RelativeLayout, 2131427391 - android.widget.TextView], res/layout-v21/notification_template_custom_big.xml=[2131427427 - android.view.ViewStub, 2131427428 - android.widget.TextView, 2131427431 - android.widget.LinearLayout, 2131427423 - android.widget.LinearLayout, -1 - android.widget.LinearLayout, 2131427426 - android.view.ViewStub, 2131427430 - android.widget.FrameLayout, 2131427422 - android.widget.ImageView, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout/abc_list_menu_item_checkbox.xml=[2131427390 - android.widget.CheckBox], res/layout/abc_popup_menu_header_item_layout.xml=[16908310 - android.widget.TextView, -1 - android.widget.FrameLayout], res/layout-v17/notification_template_big_media_narrow.xml=[2131427420 - android.widget.RelativeLayout, 2131427421 - android.widget.LinearLayout, 2131427372 - android.widget.ImageView, 2131427422 - android.widget.ImageView], res/layout-v17/notification_template_lines_media.xml=[2131427436 - android.widget.TextView, 2131427434 - android.widget.TextView, 2131427428 - android.widget.TextView, 2131427373 - android.widget.TextView, -1 - android.widget.LinearLayout, 2131427433 - android.widget.LinearLayout, 2131427435 - android.widget.LinearLayout, 2131427427 - android.widget.Chronometer], res/layout/abc_list_menu_item_radio.xml=[2131427392 - android.widget.RadioButton], res/layout-v11/notification_template_big_media_narrow.xml=[2131427420 - android.widget.RelativeLayout, 2131427421 - android.widget.LinearLayout, 2131427372 - android.widget.ImageView, 2131427422 - android.widget.ImageView], res/layout-v17/abc_dialog_title_material.xml=[2131427373 - android.widget.TextView], res/layout/abc_activity_chooser_view.xml=[2131427370 - android.widget.FrameLayout, 2131427369 - android.widget.ImageView, 2131427368 - android.widget.FrameLayout], res/layout/notification_action_tombstone.xml=[2131427416 - android.widget.ImageView, 2131427415 - android.widget.LinearLayout, 2131427417 - android.widget.TextView], res/layout-v17/select_dialog_multichoice_material.xml=[16908308 - android.widget.CheckedTextView], res/layout/abc_action_bar_up_container.xml=[-1 - android.widget.LinearLayout], res/layout/activity_main.xml=[2131427414 - android.widget.Button, -1 - android.widget.RelativeLayout], res/layout-v21/notification_template_icon_group.xml=[2131427429 - android.widget.ImageView, 2131427432 - android.widget.FrameLayout, 2131427372 - android.widget.ImageView], res/layout/abc_search_view.xml=[2131427407 - android.widget.LinearLayout, 2131427405 - android.widget.LinearLayout, 2131427406 - android.widget.ImageView, 2131427403 - android.widget.TextView, 2131427409 - android.widget.ImageView, 2131427412 - android.widget.ImageView, 2131427411 - android.widget.ImageView, 2131427402 - android.widget.LinearLayout, 2131427404 - android.widget.ImageView, 2131427410 - android.widget.LinearLayout], res/layout/abc_activity_chooser_view_list_item.xml=[2131427371 - android.widget.LinearLayout, 2131427373 - android.widget.TextView, -1 - android.widget.LinearLayout, 2131427372 - android.widget.ImageView], res/layout/notification_template_media.xml=[2131427420 - android.widget.LinearLayout, 2131427437 - android.widget.ImageView, 2131427421 - android.widget.LinearLayout], res/layout/notification_template_lines_media.xml=[2131427436 - android.widget.TextView, 2131427434 - android.widget.TextView, 2131427428 - android.widget.TextView, 2131427373 - android.widget.TextView, -1 - android.widget.LinearLayout, 2131427433 - android.widget.LinearLayout, 2131427435 - android.widget.LinearLayout, 2131427427 - android.widget.Chronometer], res/layout-v11/notification_template_big_media.xml=[2131427420 - android.widget.RelativeLayout, 2131427421 - android.widget.LinearLayout, 2131427422 - android.widget.ImageView], res/layout/abc_action_bar_title_item.xml=[-1 - android.widget.LinearLayout, 2131427364 - android.widget.TextView, 2131427365 - android.widget.TextView], res/layout/support_simple_spinner_dropdown_item.xml=[16908308 - android.widget.TextView], res/layout-v11/notification_template_big_media_custom.xml=[2131427420 - android.widget.RelativeLayout, 2131427428 - android.widget.TextView, 2131427423 - android.widget.LinearLayout, 2131427421 - android.widget.LinearLayout, 2131427427 - android.widget.Chronometer, 2131427422 - android.widget.ImageView, 2131427424 - android.widget.FrameLayout, 2131427425 - android.widget.FrameLayout], res/layout/abc_list_menu_item_icon.xml=[2131427372 - android.widget.ImageView]} layout controls
+Entry point calculation done.
+Created a SourceSinkManager with 89 sources, 133 sinks, and 5 callback methods.
+Using 'android.jar' as android.jar
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: android.app.Notification$DecoratedCustomViewStyle is a phantom class!
+Warning: android.app.Notification$DecoratedMediaCustomViewStyle is a phantom class!
+Warning: android.app.Notification$MessagingStyle$Message is a phantom class!
+Warning: android.app.Notification$MessagingStyle is a phantom class!
+Warning: android.app.SharedElementCallback$OnSharedElementsReadyListener is a phantom class!
+Warning: android.graphics.drawable.Animatable2$AnimationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationResult is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$CryptoObject is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager is a phantom class!
+Warning: android.media.browse.MediaBrowser$ItemCallback is a phantom class!
+Warning: android.view.SearchEvent is a phantom class!
+Warning: android.view.PointerIcon is a phantom class!
+Warning: android.widget.ThemedSpinnerAdapter is a phantom class!
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot create valid constructor for android.content.DialogInterface, because it is an interface and cannot substitute with subclass
+[main] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.example.asif.gpstracking.MainActivity $r1;
+        android.os.Bundle $r2;
+        com.example.asif.gpstracking.GPSTracker $r3, $r5;
+        com.example.asif.gpstracking.GPSTracker$1 $r4;
+        com.example.asif.gpstracking.GPSTracker$2 $r6;
+        com.example.asif.gpstracking.MainActivity$1 $r7;
+        android.view.View $r8;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label1:
+        if $i0 == 0 goto label9;
+
+        $r1 = new com.example.asif.gpstracking.MainActivity;
+
+        specialinvoke $r1.<com.example.asif.gpstracking.MainActivity: void <init>()>();
+
+        if $i0 == 1 goto label9;
+
+        $r2 = new android.os.Bundle;
+
+        specialinvoke $r2.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r1.<com.example.asif.gpstracking.MainActivity: void onCreate(android.os.Bundle)>($r2);
+
+        $r2 = null;
+
+     label2:
+        if $i0 == 3 goto label8;
+
+     label3:
+        $r3 = new com.example.asif.gpstracking.GPSTracker;
+
+        specialinvoke $r3.<com.example.asif.gpstracking.GPSTracker: void <init>(android.content.Context)>($r1);
+
+        $r4 = new com.example.asif.gpstracking.GPSTracker$1;
+
+        specialinvoke $r4.<com.example.asif.gpstracking.GPSTracker$1: void <init>(com.example.asif.gpstracking.GPSTracker)>($r3);
+
+        if $i0 == 4 goto label4;
+
+        virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker$1: void onClick(android.content.DialogInterface,int)>(null, 0);
+
+     label4:
+        $r5 = new com.example.asif.gpstracking.GPSTracker;
+
+        specialinvoke $r5.<com.example.asif.gpstracking.GPSTracker: void <init>(android.content.Context)>($r1);
+
+        $r6 = new com.example.asif.gpstracking.GPSTracker$2;
+
+        specialinvoke $r6.<com.example.asif.gpstracking.GPSTracker$2: void <init>(com.example.asif.gpstracking.GPSTracker)>($r5);
+
+        if $i0 == 5 goto label5;
+
+        virtualinvoke $r6.<com.example.asif.gpstracking.GPSTracker$2: void onClick(android.content.DialogInterface,int)>(null, 0);
+
+     label5:
+        if $i0 == 6 goto label6;
+
+        staticinvoke <com.example.asif.gpstracking.MainActivity: void <clinit>()>();
+
+     label6:
+        $r7 = new com.example.asif.gpstracking.MainActivity$1;
+
+        specialinvoke $r7.<com.example.asif.gpstracking.MainActivity$1: void <init>(com.example.asif.gpstracking.MainActivity)>($r1);
+
+        if $i0 == 7 goto label7;
+
+        $r8 = new android.view.View;
+
+        specialinvoke $r8.<android.view.View: void <init>(android.content.Context)>($r1);
+
+        virtualinvoke $r7.<com.example.asif.gpstracking.MainActivity$1: void onClick(android.view.View)>($r8);
+
+        $r8 = null;
+
+     label7:
+        if $i0 == 8 goto label3;
+
+     label8:
+        if $i0 == 9 goto label2;
+
+        if $i0 == 10 goto label9;
+
+        if $i0 == 11 goto label2;
+
+     label9:
+        if $i0 == 13 goto label1;
+
+        return;
+    }
+
+May 31, 2017 8:44:25 PM Main.java.Config init
+INFO: initialization finished...
+May 31, 2017 8:44:25 PM Main.java.Config init
+INFO: [input]/home/asif/MTP/Experiments/apimonitor/APIMonitor-beta/apks_old/GPSTracking.apk, [output]output/APK_CG [processedFile]/home/asif/MTP/Experiments/apimonitor/APIMonitor-beta/logs/GPSTracking.log [sensitive_api_file]sensitive_apis.txt [global_output_api_file]global_output_apis.txt
+com.example.asif.gpstracking
+com.example.asif.gpstracking
+Reading log file
+V/DroidBox( 1041): Lcom/example/asif/gpstracking/MainActivity;->onCreate(Landroid/os/Bundle;)V->Lcom/example/asif/gpstracking/MainActivity;->findViewById(I=2131427414)Landroid/view/View;=android.support.v7.widget.AppCompatButton@415311d0
+parts: Lcom/example/asif/gpstracking/MainActivity;->onCreate(Landroid/os/Bundle;)V->Lcom/example/asif/gpstracking/MainActivity;->findViewById(I=2131427414)Landroid/view/View;=android.support.v7.widget.AppCompatButton@415311d0
+partSplit: Lcom/example/asif/gpstracking/MainActivity; onCreate(Landroid/os/Bundle;)V Lcom/example/asif/gpstracking/MainActivity;findViewById(I=2131427414)Landroid/view/View;=android.support.v7.widget.AppCompatButton@415311d0
+ Lcom/example/asif/gpstracking/MainActivity;
+V/DroidBox( 1041): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/util/Log;->d(Ljava/lang/String;=Network | Ljava/lang/String;=Network)I=17
+parts: Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/util/Log;->d(Ljava/lang/String;=Network | Ljava/lang/String;=Network)I=17
+partSplit: Lcom/example/asif/gpstracking/GPSTracker; getLocation()Landroid/location/Location; Landroid/util/Log;d(Ljava/lang/String;=Network | Ljava/lang/String;=Network)I=17
+ Lcom/example/asif/gpstracking/GPSTracker;
+V/DroidBox( 1041): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;=network)Landroid/location/Location;=null
+parts: Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;=network)Landroid/location/Location;=null
+partSplit: Lcom/example/asif/gpstracking/GPSTracker; getLocation()Landroid/location/Location; Landroid/location/LocationManager;getLastKnownLocation(Ljava/lang/String;=network)Landroid/location/Location;=null
+ Lcom/example/asif/gpstracking/GPSTracker;
+V/DroidBox( 1041): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;=gps | J=60000 | F=10.0 | Landroid/location/LocationListener;=com.example.asif.gpstracking.GPSTracker@415351a8)V
+parts: Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;=gps | J=60000 | F=10.0 | Landroid/location/LocationListener;=com.example.asif.gpstracking.GPSTracker@415351a8)V
+partSplit: Lcom/example/asif/gpstracking/GPSTracker; getLocation()Landroid/location/Location; Landroid/location/LocationManager;requestLocationUpdates(Ljava/lang/String;=gps | J=60000 | F=10.0 | Landroid/location/LocationListener;=com.example.asif.gpstracking.GPSTracker@415351a8)V
+ Lcom/example/asif/gpstracking/GPSTracker;
+V/DroidBox( 1041): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/util/Log;->d(Ljava/lang/String;=GPS_ENABLED | Ljava/lang/String;=GPS_Enabled)I=25
+parts: Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/util/Log;->d(Ljava/lang/String;=GPS_ENABLED | Ljava/lang/String;=GPS_Enabled)I=25
+partSplit: Lcom/example/asif/gpstracking/GPSTracker; getLocation()Landroid/location/Location; Landroid/util/Log;d(Ljava/lang/String;=GPS_ENABLED | Ljava/lang/String;=GPS_Enabled)I=25
+ Lcom/example/asif/gpstracking/GPSTracker;
+V/DroidBox( 1041): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;=gps)Landroid/location/Location;=Location[mProvider=gps,mTime=1496093168000,mLatitude=37.421998333333335,mLongitude=122.08400000000002,mHasAltitude=true,mAltitude=0.0,mHasSpeed=false,mSpeed=0.0,mHasBearing=false,mBearing=0.0,mHasAccuracy=false,mAccuracy=0.0,mExtras=Bundle[mParcelledData.dataSize=4]]
+parts: Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;=gps)Landroid/location/Location;=Location[mProvider=gps,mTime=1496093168000,mLatitude=37.421998333333335,mLongitude=122.08400000000002,mHasAltitude=true,mAltitude=0.0,mHasSpeed=false,mSpeed=0.0,mHasBearing=false,mBearing=0.0,mHasAccuracy=false,mAccuracy=0.0,mExtras=Bundle[mParcelledData.dataSize=4]]
+partSplit: Lcom/example/asif/gpstracking/GPSTracker; getLocation()Landroid/location/Location; Landroid/location/LocationManager;getLastKnownLocation(Ljava/lang/String;=gps)Landroid/location/Location;=Location[mProvider=gps,mTime=1496093168000,mLatitude=37.421998333333335,mLongitude=122.08400000000002,mHasAltitude=true,mAltitude=0.0,mHasSpeed=false,mSpeed=0.0,mHasBearing=false,mBearing=0.0,mHasAccuracy=false,mAccuracy=0.0,mExtras=Bundle[mParcelledData.dataSize=4]]
+ Lcom/example/asif/gpstracking/GPSTracker;
+V/DroidBox( 1041): Lcom/example/asif/gpstracking/GPSTracker$1;->onClick(Landroid/content/DialogInterface;I)V->Landroid/content/Intent;-><init>(Ljava/lang/String;=android.intent.action.SEND)V
+parts: Lcom/example/asif/gpstracking/GPSTracker$1;->onClick(Landroid/content/DialogInterface;I)V->Landroid/content/Intent;-><init>(Ljava/lang/String;=android.intent.action.SEND)V
+partSplit: Lcom/example/asif/gpstracking/GPSTracker$1; onClick(Landroid/content/DialogInterface;I)V Landroid/content/Intent;<init>(Ljava/lang/String;=android.intent.action.SEND)V
+ Lcom/example/asif/gpstracking/GPSTracker$1;
+V/DroidBox( 1094): Lcom/example/asif/recieveintent/MainActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/util/Log;->d(Ljava/lang/String;=Logitude | Ljava/lang/String;=demo1)I=16
+parts: Lcom/example/asif/recieveintent/MainActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/util/Log;->d(Ljava/lang/String;=Logitude | Ljava/lang/String;=demo1)I=16
+partSplit: Lcom/example/asif/recieveintent/MainActivity; onCreate(Landroid/os/Bundle;)V Landroid/util/Log;d(Ljava/lang/String;=Logitude | Ljava/lang/String;=demo1)I=16
+ Lcom/example/asif/recieveintent/MainActivity;
+V/DroidBox( 1094): Lcom/example/asif/recieveintent/MainActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/util/Log;->d(Ljava/lang/String;=latitude | Ljava/lang/String;=122.08400000000002)I=29
+parts: Lcom/example/asif/recieveintent/MainActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/util/Log;->d(Ljava/lang/String;=latitude | Ljava/lang/String;=122.08400000000002)I=29
+partSplit: Lcom/example/asif/recieveintent/MainActivity; onCreate(Landroid/os/Bundle;)V Landroid/util/Log;d(Ljava/lang/String;=latitude | Ljava/lang/String;=122.08400000000002)I=29
+ Lcom/example/asif/recieveintent/MainActivity;
+V/DroidBox( 1094): Lcom/example/asif/recieveintent/MainActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/widget/Toast;->makeText(Landroid/content/Context;=android.app.Application@414be6b8 | Ljava/lang/CharSequence;=Latitude: 122.08400000000002Longitude : 37.421998333333335 | I=1)Landroid/widget/Toast;=android.widget.Toast@414fef20
+parts: Lcom/example/asif/recieveintent/MainActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/widget/Toast;->makeText(Landroid/content/Context;=android.app.Application@414be6b8 | Ljava/lang/CharSequence;=Latitude
+partSplit: Lcom/example/asif/recieveintent/MainActivity; onCreate(Landroid/os/Bundle;)V Landroid/widget/Toast;makeText(Landroid/content/Context;=android.app.Application@414be6b8 | Ljava/lang/CharSequence;=Latitude
+ Lcom/example/asif/recieveintent/MainActivity;
+Reading sensitiveApi file
+sensitive_apis.txt
+Landroid/location/Location;
+Landroid/location/Location;->getLongitude
+Landroid/location/LocationManager;->getLastKnownLocation
+Landroid/location/LocationManager;->requestLocationUpdates
+Reading global output file
+Landroid/util/Log;->d
+Landroid/widget/Toast;->makeText
+package namecom.example.asif.gpstracking
+className com.example.asif.gpstracking.BuildConfig
+<clinit>
+<init>
+className com.example.asif.gpstracking.GPSTracker$1
+<init>
+onClick
+className com.example.asif.gpstracking.GPSTracker
+<init>
+access$000
+canGetLocation
+getLatitude
+getLocation
+getLongitude
+onBind
+onLocationChanged
+onProviderDisabled
+onProviderEnabled
+onStatusChanged
+showSettingsAlert
+className com.example.asif.gpstracking.GPSTracker$2
+<init>
+onClick
+className com.example.asif.gpstracking.MainActivity$1
+<init>
+onClick
+className com.example.asif.gpstracking.MainActivity
+<clinit>
+<init>
+onCreate
+sendMessage
+className com.example.asif.gpstracking.R$anim
+<init>
+className com.example.asif.gpstracking.R
+<init>
+className com.example.asif.gpstracking.R$attr
+<init>
+className com.example.asif.gpstracking.R$bool
+<init>
+className com.example.asif.gpstracking.R$color
+<init>
+className com.example.asif.gpstracking.R$dimen
+<init>
+className com.example.asif.gpstracking.R$drawable
+<init>
+className com.example.asif.gpstracking.R$id
+<init>
+className com.example.asif.gpstracking.R$integer
+<init>
+className com.example.asif.gpstracking.R$layout
+<init>
+className com.example.asif.gpstracking.R$mipmap
+<init>
+className com.example.asif.gpstracking.R$string
+<init>
+className com.example.asif.gpstracking.R$style
+<init>
+className com.example.asif.gpstracking.R$styleable
+<clinit>
+<init>
+localscom.example.asif.gpstracking.MainActivity onCreate
+$r0
+$r1
+$r2
+$r3
+$r4
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.MainActivity
+Identity Statement
+handle it later
+fallsthrough $r1 := @parameter0: android.os.Bundle
+fallsthrough specialinvoke $r0.<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>($r1)
+fallsthrough virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: void setContentView(int)>(2130968603)
+Assignment Statment
+Class :android.support.v7.app.AppCompatActivity method :findViewById
+arguments
+2131427414$r3 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: android.view.View findViewById(int)>(2131427414)
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.widget.Button) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.MainActivity: android.widget.Button btnShowLocation> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.MainActivity: android.widget.Button btnShowLocation>
+Assignment Statment
+$r2 null
+fallsthrough $r2 = new com.example.asif.gpstracking.MainActivity$1
+fallsthrough specialinvoke $r2.<com.example.asif.gpstracking.MainActivity$1: void <init>(com.example.asif.gpstracking.MainActivity)>($r0)
+fallsthrough virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r2)
+localscom.example.asif.gpstracking.GPSTracker getLocation
+$r0
+$r1
+$r2
+$r3
+$r4
+$z0
+$r5
+$d0
+r6
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.GPSTracker
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.GPSTracker: android.content.Context mcontext>
+Assignment Statment
+Class :android.content.Context method :getSystemService
+arguments
+"location"$r3 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r2.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("location")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.location.LocationManager) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"gps"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled> = $z0
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"network"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled> = $z0
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$r1 := @caughtexception
+fallsthrough staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 null
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("gps", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("GPS_ENABLED", "GPS_Enabled")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"gps"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r1 := @caughtexception
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("network", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"network"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+branched goto [?= $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>]
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Identity Statement
+fallsthrough $r1 := @caughtexception
+Assignment Statment
+r6 null
+fallsthrough r6 = (java.lang.Exception) $r1
+fallsthrough virtualinvoke r6.<java.lang.Exception: void printStackTrace()>()
+branched goto [?= $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>]
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+localscom.example.asif.gpstracking.GPSTracker getLocation
+$r0
+$r1
+$r2
+$r3
+$r4
+$z0
+$r5
+$d0
+r6
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.GPSTracker
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.GPSTracker: android.content.Context mcontext>
+Assignment Statment
+Class :android.content.Context method :getSystemService
+arguments
+"location"$r3 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r2.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("location")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.location.LocationManager) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"gps"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled> = $z0
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"network"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled> = $z0
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$r1 := @caughtexception
+fallsthrough staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("gps", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("GPS_ENABLED", "GPS_Enabled")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"gps"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r1 := @caughtexception
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("network", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"network"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+branched goto [?= $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>]
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Identity Statement
+fallsthrough $r1 := @caughtexception
+Assignment Statment
+r6 null
+fallsthrough r6 = (java.lang.Exception) $r1
+fallsthrough virtualinvoke r6.<java.lang.Exception: void printStackTrace()>()
+branched goto [?= $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>]
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+localscom.example.asif.gpstracking.GPSTracker getLocation
+$r0
+$r1
+$r2
+$r3
+$r4
+$z0
+$r5
+$d0
+r6
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.GPSTracker
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.GPSTracker: android.content.Context mcontext>
+Assignment Statment
+Class :android.content.Context method :getSystemService
+arguments
+"location"$r3 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r2.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("location")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.location.LocationManager) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"gps"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled> = $z0
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"network"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled> = $z0
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$r1 := @caughtexception
+fallsthrough staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("gps", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("GPS_ENABLED", "GPS_Enabled")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"gps"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r1 := @caughtexception
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("network", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"network"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+branched goto [?= $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>]
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Identity Statement
+fallsthrough $r1 := @caughtexception
+Assignment Statment
+r6 null
+fallsthrough r6 = (java.lang.Exception) $r1
+fallsthrough virtualinvoke r6.<java.lang.Exception: void printStackTrace()>()
+branched goto [?= $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>]
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+localscom.example.asif.gpstracking.GPSTracker getLocation
+$r0
+$r1
+$r2
+$r3
+$r4
+$z0
+$r5
+$d0
+r6
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.GPSTracker
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.GPSTracker: android.content.Context mcontext>
+Assignment Statment
+Class :android.content.Context method :getSystemService
+arguments
+"location"$r3 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r2.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("location")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.location.LocationManager) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"gps"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled> = $z0
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"network"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled> = $z0
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$r1 := @caughtexception
+fallsthrough staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("gps", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("GPS_ENABLED", "GPS_Enabled")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"gps"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r1 := @caughtexception
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("network", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"network"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+branched goto [?= $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>]
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Identity Statement
+fallsthrough $r1 := @caughtexception
+Assignment Statment
+r6 null
+fallsthrough r6 = (java.lang.Exception) $r1
+fallsthrough virtualinvoke r6.<java.lang.Exception: void printStackTrace()>()
+branched goto [?= $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>]
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+localscom.example.asif.gpstracking.GPSTracker getLocation
+$r0
+$r1
+$r2
+$r3
+$r4
+$z0
+$r5
+$d0
+r6
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.GPSTracker
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.GPSTracker: android.content.Context mcontext>
+Assignment Statment
+Class :android.content.Context method :getSystemService
+arguments
+"location"$r3 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r2.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("location")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.location.LocationManager) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"gps"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled> = $z0
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :isProviderEnabled
+arguments
+"network"$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled> = $z0
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched if $z0 != 0 goto $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+branched stmt
+$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+branched stmt
+$r1 := @caughtexception
+fallsthrough staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("Network", "No Network provider is available")
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+fallsthrough if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $z0 == 0 goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 != null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("gps", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("GPS_ENABLED", "GPS_Enabled")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r4 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"gps"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched if $r5 == null goto $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation> = 1
+Assignment Statment
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isNetworkEnabled>
+fallsthrough if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched if $z0 == 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+branched stmt
+$r1 := @caughtexception
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough virtualinvoke $r4.<android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)>("network", 60000L, 10.0F, $r0)
+fallsthrough staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Network", "Network")
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+fallsthrough if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r4 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.LocationManager locationManager>
+Assignment Statment
+Class :android.location.LocationManager method :getLastKnownLocation
+arguments
+"network"$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location> = $r5
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+fallsthrough if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched if $r5 == null goto $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLatitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLatitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double latitude> = $d0
+Assignment Statment
+$r5 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+Assignment Statment
+Class :android.location.Location method :getLongitude
+arguments
+$d0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r5.<android.location.Location: double getLongitude()>()
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.GPSTracker: double longitude> = $d0
+branched goto [?= $z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>]
+branched stmt
+$z0 = $r0.<com.example.asif.gpstracking.GPSTracker: boolean isGPSEnabled>
+Identity Statement
+fallsthrough $r1 := @caughtexception
+Assignment Statment
+r6 null
+fallsthrough r6 = (java.lang.Exception) $r1
+fallsthrough virtualinvoke r6.<java.lang.Exception: void printStackTrace()>()
+branched goto [?= $r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>]
+branched stmt
+$r5 = $r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>
+localscom.example.asif.gpstracking.GPSTracker$1 onClick
+$r0
+$r1
+$r2
+$r3
+$r4
+$z0
+$d0
+$d1
+$r5
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.MainActivity$1
+Identity Statement
+handle it later
+fallsthrough $r1 := @parameter0: android.view.View
+Assignment Statment
+$r3 null
+fallsthrough $r3 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = new com.example.asif.gpstracking.GPSTracker
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+fallsthrough specialinvoke $r4.<com.example.asif.gpstracking.GPSTracker: void <init>(android.content.Context)>($r2)
+Assignment Statment
+fallsthrough $r3.<com.example.asif.gpstracking.MainActivity: com.example.asif.gpstracking.GPSTracker gps> = $r4
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r2.<com.example.asif.gpstracking.MainActivity: com.example.asif.gpstracking.GPSTracker gps>
+Assignment Statment
+Class :com.example.asif.gpstracking.GPSTracker method :canGetLocation
+arguments
+Parse Method: canGetLocation
+$r0
+z0
+Returning from processLocalMethod
+----------------------------------------------
+{com.example.asif.gpstracking.MainActivity.onCreate.$r1={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.$r0={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation()>()={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: android.view.View findViewById(int)>(2131427414)={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, S1={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r5.<android.location.Location: double getLongitude()>()={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r5.<android.location.Location: double getLatitude()>()={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$z0={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$z0={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r5={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r3={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$r1={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$r0={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r0={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("gps")={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.canGetLocation.$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation>={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.canGetLocation.z0={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r2.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("location")={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$d0={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("network")={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.$r3={owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}}
+----------------------------------------------
+{android.widget.Toast=[makeText], android.util.Log=[d]}
+$z0 {owner=[com.example.asif.gpstracking], readers=[public, com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $z0 = virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation()>()
+fallsthrough if $z0 == 0 goto $r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+branched if $z0 == 0 goto $r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+branched stmt
+$r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+branched stmt
+$r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r2.<com.example.asif.gpstracking.MainActivity: com.example.asif.gpstracking.GPSTracker gps>
+Assignment Statment
+Class :com.example.asif.gpstracking.GPSTracker method :getLatitude
+arguments
+Parse Method: getLatitude
+$r0
+$d0
+$r1
+Returning from processLocalMethod
+----------------------------------------------
+{com.example.asif.gpstracking.MainActivity.onCreate.$r1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.$r0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: android.view.View findViewById(int)>(2131427414)={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, S1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r5.<android.location.Location: double getLongitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r5.<android.location.Location: double getLatitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.$r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$z0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$z0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.$r0.<com.example.asif.gpstracking.GPSTracker: double latitude>={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r5={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r3={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.$r1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$r1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$r0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("gps")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.canGetLocation.$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation>={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.canGetLocation.z0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.$d0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$d0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r2.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("location")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$d0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.virtualinvoke $r1.<android.location.Location: double getLatitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("network")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.$r3={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: double getLatitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}}
+----------------------------------------------
+{android.widget.Toast=[makeText], android.util.Log=[d]}
+$d0 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}
+fallsthrough $d0 = virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: double getLatitude()>()
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r2.<com.example.asif.gpstracking.MainActivity: com.example.asif.gpstracking.GPSTracker gps>
+Assignment Statment
+Class :com.example.asif.gpstracking.GPSTracker method :getLongitude
+arguments
+Parse Method: getLongitude
+$r0
+$d0
+$r1
+Returning from processLocalMethod
+----------------------------------------------
+{com.example.asif.gpstracking.GPSTracker.getLatitude.virtualinvoke $r1.<android.location.Location: double getLatitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r5={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r3={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$r0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLongitude.$d0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$r1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.canGetLocation.$r0.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation>={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$r0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: android.view.View findViewById(int)>(2131427414)={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r5.<android.location.Location: double getLongitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: double getLatitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.$r3={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.$d0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, S1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.$r1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.MainActivity.onCreate.$r0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$z0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("gps")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$z0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLongitude.$r1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLongitude.$r0.<com.example.asif.gpstracking.GPSTracker: double longitude>={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLongitude.virtualinvoke $r1.<android.location.Location: double getLongitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r2.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("location")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.$d0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$d1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.$r0.<com.example.asif.gpstracking.GPSTracker: double latitude>={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.$d0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLongitude.$r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: boolean canGetLocation()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.$r1={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("network")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker$1.onClick.virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: double getLongitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.canGetLocation.z0={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>("gps")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLatitude.$r0.<com.example.asif.gpstracking.GPSTracker: android.location.Location location>={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r4.<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>("network")={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}, com.example.asif.gpstracking.GPSTracker.getLocation.virtualinvoke $r5.<android.location.Location: double getLatitude()>()={owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}}
+----------------------------------------------
+{android.widget.Toast=[makeText], android.util.Log=[d]}
+$d1 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}
+fallsthrough $d1 = virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: double getLongitude()>()
+Assignment Statment
+$r5 null
+fallsthrough $r5 = new java.lang.StringBuilder
+fallsthrough specialinvoke $r5.<java.lang.StringBuilder: void <init>()>()
+Assignment Statment
+Class :java.lang.StringBuilder method :append
+arguments
+"Your Location is- \nLat: "$r5 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Your Location is- \nLat: ")
+Assignment Statment
+Class :java.lang.StringBuilder method :append
+arguments
+$d0$r5 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(double)>($d0)
+Assignment Statment
+Class :java.lang.StringBuilder method :append
+arguments
+"\nLong: "$r5 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\nLong: ")
+Assignment Statment
+Class :java.lang.StringBuilder method :append
+arguments
+$d1$r5 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[public, com.example.asif.gpstracking]}
+fallsthrough $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(double)>($d1)
+fallsthrough virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>()
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+fallsthrough virtualinvoke $r2.<com.example.asif.gpstracking.MainActivity: void sendMessage(double,double)>($d0, $d1)
+Assignment Statment
+$r2 null
+fallsthrough $r2 = $r0.<com.example.asif.gpstracking.MainActivity$1: com.example.asif.gpstracking.MainActivity this$0>
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r2.<com.example.asif.gpstracking.MainActivity: com.example.asif.gpstracking.GPSTracker gps>
+fallsthrough virtualinvoke $r4.<com.example.asif.gpstracking.GPSTracker: void showSettingsAlert()>()
+localscom.example.asif.recieveintent.MainActivity onCreate
+$r0
+$r1
+$r2
+$r3
+$r4
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.MainActivity
+Identity Statement
+handle it later
+fallsthrough $r1 := @parameter0: android.os.Bundle
+fallsthrough specialinvoke $r0.<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>($r1)
+fallsthrough virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: void setContentView(int)>(2130968603)
+Assignment Statment
+Class :android.support.v7.app.AppCompatActivity method :findViewById
+arguments
+2131427414$r3 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: android.view.View findViewById(int)>(2131427414)
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.widget.Button) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.MainActivity: android.widget.Button btnShowLocation> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.MainActivity: android.widget.Button btnShowLocation>
+Assignment Statment
+$r2 null
+fallsthrough $r2 = new com.example.asif.gpstracking.MainActivity$1
+fallsthrough specialinvoke $r2.<com.example.asif.gpstracking.MainActivity$1: void <init>(com.example.asif.gpstracking.MainActivity)>($r0)
+fallsthrough virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r2)
+localscom.example.asif.recieveintent.MainActivity onCreate
+$r0
+$r1
+$r2
+$r3
+$r4
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.MainActivity
+Identity Statement
+handle it later
+fallsthrough $r1 := @parameter0: android.os.Bundle
+fallsthrough specialinvoke $r0.<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>($r1)
+fallsthrough virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: void setContentView(int)>(2130968603)
+Assignment Statment
+Class :android.support.v7.app.AppCompatActivity method :findViewById
+arguments
+2131427414$r3 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: android.view.View findViewById(int)>(2131427414)
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.widget.Button) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.MainActivity: android.widget.Button btnShowLocation> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.MainActivity: android.widget.Button btnShowLocation>
+Assignment Statment
+$r2 null
+fallsthrough $r2 = new com.example.asif.gpstracking.MainActivity$1
+fallsthrough specialinvoke $r2.<com.example.asif.gpstracking.MainActivity$1: void <init>(com.example.asif.gpstracking.MainActivity)>($r0)
+fallsthrough virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r2)
+localscom.example.asif.recieveintent.MainActivity onCreate
+$r0
+$r1
+$r2
+$r3
+$r4
+Inside trials
+Identity Statement
+fallsthrough $r0 := @this: com.example.asif.gpstracking.MainActivity
+Identity Statement
+handle it later
+fallsthrough $r1 := @parameter0: android.os.Bundle
+fallsthrough specialinvoke $r0.<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>($r1)
+fallsthrough virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: void setContentView(int)>(2130968603)
+Assignment Statment
+Class :android.support.v7.app.AppCompatActivity method :findViewById
+arguments
+2131427414$r3 {owner=[com.example.asif.gpstracking], readers=[com.example.asif.gpstracking], writers=[com.example.asif.gpstracking]}
+fallsthrough $r3 = virtualinvoke $r0.<com.example.asif.gpstracking.MainActivity: android.view.View findViewById(int)>(2131427414)
+Assignment Statment
+$r4 null
+fallsthrough $r4 = (android.widget.Button) $r3
+Assignment Statment
+fallsthrough $r0.<com.example.asif.gpstracking.MainActivity: android.widget.Button btnShowLocation> = $r4
+Assignment Statment
+$r4 null
+fallsthrough $r4 = $r0.<com.example.asif.gpstracking.MainActivity: android.widget.Button btnShowLocation>
+Assignment Statment
+$r2 null
+fallsthrough $r2 = new com.example.asif.gpstracking.MainActivity$1
+fallsthrough specialinvoke $r2.<com.example.asif.gpstracking.MainActivity$1: void <init>(com.example.asif.gpstracking.MainActivity)>($r0)
+fallsthrough virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r2)
+
+Process finished with exit code 0

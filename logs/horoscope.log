@@ -1,0 +1,1335 @@
+/usr/lib/jvm/java-8-openjdk-amd64/bin/java -javaagent:/opt/intellij-idea-community/lib/idea_rt.jar=44420:/opt/intellij-idea-community/bin -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/home/asif/MTP/Experiments/soot-infoflow-android/out/production/soot-infoflow-android:/home/asif/MTP/Experiments/soot-infoflow-android/lib/junit.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/org.hamcrest.core_1.3.0.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/axml-2.0.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/AXMLPrinter2.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/slf4j-api-1.7.5.jar:/home/asif/MTP/Experiments/soot-infoflow-android/lib/slf4j-simple-1.7.5.jar:/home/asif/Downloads/soot-infoflow.jar:/home/asif/Downloads/soot-trunk.jar:/home/asif/Downloads/slf4j-simple-1.7.5.jar:/home/asif/Downloads/slf4j-api-1.7.5.jar:/home/asif/Downloads/axml-2.0.jar:/home/asif/Downloads/commons-cli-1.3.1.jar Main -o output -i HelloWorld.apk -sdk android.jar -debug
+Jun 04, 2017 11:15:31 PM Main.java.Config init
+INFO: initializing...
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/asif/MTP/Experiments/soot-infoflow-android/lib/slf4j-simple-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/asif/Downloads/soot-trunk.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/asif/Downloads/slf4j-simple-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
+[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.254511244 seconds
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: android.app.Notification$DecoratedCustomViewStyle is a phantom class!
+Warning: android.app.Notification$DecoratedMediaCustomViewStyle is a phantom class!
+Warning: android.app.Notification$MessagingStyle$Message is a phantom class!
+Warning: android.app.Notification$MessagingStyle is a phantom class!
+Warning: android.app.SharedElementCallback$OnSharedElementsReadyListener is a phantom class!
+Warning: android.app.VoiceInteractor is a phantom class!
+Warning: android.app.assist.AssistContent is a phantom class!
+Warning: android.graphics.drawable.Animatable2$AnimationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationResult is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$CryptoObject is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager is a phantom class!
+Warning: android.media.browse.MediaBrowser$ItemCallback is a phantom class!
+Warning: android.view.SearchEvent is a phantom class!
+Warning: android.view.DragAndDropPermissions is a phantom class!
+Warning: android.view.PointerIcon is a phantom class!
+Warning: android.widget.ThemedSpinnerAdapter is a phantom class!
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Context
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Intent
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
+[main] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.android.tools.fd.runtime.BootstrapApplication $r1;
+        com.example.asif.myapplication.SmsBroadcastReceiver $r2;
+        com.example.asif.myapplication.SmsActivity $r3;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+        $r1 = new com.android.tools.fd.runtime.BootstrapApplication;
+
+        specialinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void <init>()>();
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void onCreate()>();
+
+        <il.ac.tau.MyApplicationHolder: android.app.Application application> = $r1;
+
+     label1:
+        if $i0 == 0 goto label3;
+
+        $r2 = new com.example.asif.myapplication.SmsBroadcastReceiver;
+
+        specialinvoke $r2.<com.example.asif.myapplication.SmsBroadcastReceiver: void <init>()>();
+
+        if $i0 == 1 goto label3;
+
+     label2:
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 3 goto label2;
+
+     label3:
+        if $i0 == 5 goto label5;
+
+        $r3 = new com.example.asif.myapplication.SmsActivity;
+
+        specialinvoke $r3.<com.example.asif.myapplication.SmsActivity: void <init>()>();
+
+        if $i0 == 6 goto label5;
+
+        virtualinvoke $r3.<com.example.asif.myapplication.SmsActivity: void onCreate(android.os.Bundle)>(null);
+
+     label4:
+        virtualinvoke $r3.<com.example.asif.myapplication.SmsActivity: void onStart()>();
+
+        if $i0 == 9 goto label5;
+
+        if $i0 == 10 goto label4;
+
+     label5:
+        if $i0 == 13 goto label1;
+
+        return;
+    }
+
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Collecting callbacks in DEFAULT mode...
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.4 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.6 seconds.
+[Spark] Solution found in 0.6 seconds.
+Callback analysis done.
+Warning: ImageButton is a phantom class!
+Warning: com.example.asif.myapplication.ImageButton is a phantom class!
+Warning: android.view.ImageButton is a phantom class!
+Found 1 layout controls in file res/layout-v11/notification_media_action.xml
+Found 2 layout controls in file res/layout-v11/notification_media_cancel_action.xml
+Warning: RelativeLayout is a phantom class!
+Warning: com.example.asif.myapplication.RelativeLayout is a phantom class!
+Warning: android.view.RelativeLayout is a phantom class!
+Warning: LinearLayout is a phantom class!
+Warning: com.example.asif.myapplication.LinearLayout is a phantom class!
+Warning: android.view.LinearLayout is a phantom class!
+Warning: ImageView is a phantom class!
+Warning: com.example.asif.myapplication.ImageView is a phantom class!
+Warning: android.view.ImageView is a phantom class!
+Found 3 layout controls in file res/layout-v11/notification_template_big_media.xml
+Warning: FrameLayout is a phantom class!
+Warning: com.example.asif.myapplication.FrameLayout is a phantom class!
+Warning: android.view.FrameLayout is a phantom class!
+Could not find layout class DateTimeView
+Warning: DateTimeView is a phantom class!
+Warning: com.example.asif.myapplication.DateTimeView is a phantom class!
+Warning: android.view.DateTimeView is a phantom class!
+Warning: android.widget.DateTimeView is a phantom class!
+Warning: android.webkit.DateTimeView is a phantom class!
+Warning: Chronometer is a phantom class!
+Warning: com.example.asif.myapplication.Chronometer is a phantom class!
+Warning: android.view.Chronometer is a phantom class!
+Warning: TextView is a phantom class!
+Warning: com.example.asif.myapplication.TextView is a phantom class!
+Warning: android.view.TextView is a phantom class!
+Found 4 layout controls in file res/layout-v11/notification_template_big_media_custom.xml
+Found 5 layout controls in file res/layout-v11/notification_template_big_media_narrow.xml
+Found 6 layout controls in file res/layout-v11/notification_template_big_media_narrow_custom.xml
+Warning: ViewStub is a phantom class!
+Warning: com.example.asif.myapplication.ViewStub is a phantom class!
+Could not find layout class DateTimeView
+Found 7 layout controls in file res/layout-v16/notification_template_custom_big.xml
+Found 8 layout controls in file res/layout-v17/abc_action_mode_close_item_material.xml
+Warning: ScrollView is a phantom class!
+Warning: com.example.asif.myapplication.ScrollView is a phantom class!
+Warning: android.view.ScrollView is a phantom class!
+Warning: com.example.asif.myapplication.android.support.v7.widget.ButtonBarLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.ButtonBarLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.ButtonBarLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ButtonBarLayout is a phantom class!
+Warning: Button is a phantom class!
+Warning: com.example.asif.myapplication.Button is a phantom class!
+Warning: android.view.Button is a phantom class!
+Could not find layout class android.support.v7.widget.ButtonBarLayout
+Warning: com.example.asif.myapplication.android.support.v4.widget.Space is a phantom class!
+Warning: android.view.android.support.v4.widget.Space is a phantom class!
+Warning: android.widget.android.support.v4.widget.Space is a phantom class!
+Warning: android.webkit.android.support.v4.widget.Space is a phantom class!
+Could not find layout class android.support.v4.widget.Space
+Found 9 layout controls in file res/layout-v17/abc_alert_dialog_button_bar_material.xml
+Warning: com.example.asif.myapplication.android.support.v7.widget.DialogTitle is a phantom class!
+Warning: android.view.android.support.v7.widget.DialogTitle is a phantom class!
+Warning: android.widget.android.support.v7.widget.DialogTitle is a phantom class!
+Warning: android.webkit.android.support.v7.widget.DialogTitle is a phantom class!
+Found 10 layout controls in file res/layout-v17/abc_alert_dialog_title_material.xml
+Warning: com.example.asif.myapplication.android.support.v7.widget.FitWindowsLinearLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.FitWindowsLinearLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.FitWindowsLinearLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.FitWindowsLinearLayout is a phantom class!
+Could not find layout class android.support.v7.widget.DialogTitle
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.widget.FitWindowsLinearLayout
+Could not find layout class android.support.v7.view.menu.ListMenuItemView
+Found 11 layout controls in file res/layout-v17/abc_dialog_title_material.xml
+Found 12 layout controls in file res/layout-v17/abc_popup_menu_header_item_layout.xml
+Warning: com.example.asif.myapplication.android.support.v7.view.menu.ListMenuItemView is a phantom class!
+Warning: android.view.android.support.v7.view.menu.ListMenuItemView is a phantom class!
+Warning: android.widget.android.support.v7.view.menu.ListMenuItemView is a phantom class!
+Warning: android.webkit.android.support.v7.view.menu.ListMenuItemView is a phantom class!
+Could not find layout class view
+Found 13 layout controls in file res/layout-v17/abc_popup_menu_item_layout.xml
+Warning: view is a phantom class!
+Warning: com.example.asif.myapplication.view is a phantom class!
+Warning: android.view.view is a phantom class!
+Warning: android.widget.view is a phantom class!
+Warning: android.webkit.view is a phantom class!
+Could not find layout class view
+Could not find layout class DateTimeView
+Found 14 layout controls in file res/layout-v17/abc_search_view.xml
+Found 14 layout controls in file res/layout-v17/abc_select_dialog_material.xml
+Found 15 layout controls in file res/layout-v17/notification_action.xml
+Found 16 layout controls in file res/layout-v17/notification_action_tombstone.xml
+Found 17 layout controls in file res/layout-v17/notification_template_big_media.xml
+Found 18 layout controls in file res/layout-v17/notification_template_big_media_custom.xml
+Found 19 layout controls in file res/layout-v17/notification_template_big_media_narrow.xml
+Could not find layout class DateTimeView
+Found 20 layout controls in file res/layout-v17/notification_template_big_media_narrow_custom.xml
+Could not find layout class DateTimeView
+Found 21 layout controls in file res/layout-v17/notification_template_custom_big.xml
+Found 22 layout controls in file res/layout-v17/notification_template_lines_media.xml
+Could not find layout class DateTimeView
+Found 23 layout controls in file res/layout-v17/notification_template_media.xml
+Found 24 layout controls in file res/layout-v17/notification_template_media_custom.xml
+Warning: CheckedTextView is a phantom class!
+Warning: com.example.asif.myapplication.CheckedTextView is a phantom class!
+Warning: android.view.CheckedTextView is a phantom class!
+Could not find layout class android.support.v7.widget.ActionBarOverlayLayout
+Could not find layout class android.support.v7.widget.ActionBarContainer
+Could not find layout class android.support.v7.widget.Toolbar
+Could not find layout class android.support.v7.widget.ActionBarContextView
+Found 25 layout controls in file res/layout-v17/select_dialog_multichoice_material.xml
+Found 26 layout controls in file res/layout-v17/select_dialog_singlechoice_material.xml
+Warning: com.example.asif.myapplication.android.support.v7.widget.ActionBarOverlayLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.ActionBarOverlayLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.ActionBarOverlayLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ActionBarOverlayLayout is a phantom class!
+Warning: com.example.asif.myapplication.android.support.v7.widget.ActionBarContainer is a phantom class!
+Warning: android.view.android.support.v7.widget.ActionBarContainer is a phantom class!
+Warning: android.widget.android.support.v7.widget.ActionBarContainer is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ActionBarContainer is a phantom class!
+Warning: com.example.asif.myapplication.android.support.v7.widget.Toolbar is a phantom class!
+Warning: android.view.android.support.v7.widget.Toolbar is a phantom class!
+Warning: android.widget.android.support.v7.widget.Toolbar is a phantom class!
+Warning: android.webkit.android.support.v7.widget.Toolbar is a phantom class!
+Warning: com.example.asif.myapplication.android.support.v7.widget.ActionBarContextView is a phantom class!
+Warning: android.view.android.support.v7.widget.ActionBarContextView is a phantom class!
+Warning: android.widget.android.support.v7.widget.ActionBarContextView is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ActionBarContextView is a phantom class!
+Found 26 layout controls in file res/layout-v21/abc_screen_toolbar.xml
+Found 27 layout controls in file res/layout-v21/notification_action.xml
+Found 28 layout controls in file res/layout-v21/notification_action_tombstone.xml
+Found 29 layout controls in file res/layout-v21/notification_template_custom_big.xml
+Found 30 layout controls in file res/layout-v21/notification_template_icon_group.xml
+Found 31 layout controls in file res/layout-v22/abc_alert_dialog_button_bar_material.xml
+Found 32 layout controls in file res/layout/abc_action_bar_title_item.xml
+Found 33 layout controls in file res/layout/abc_action_bar_up_container.xml
+Found 34 layout controls in file res/layout/abc_action_bar_view_list_nav_layout.xml
+Warning: com.example.asif.myapplication.android.support.v7.view.menu.ActionMenuItemView is a phantom class!
+Warning: android.view.android.support.v7.view.menu.ActionMenuItemView is a phantom class!
+Warning: android.widget.android.support.v7.view.menu.ActionMenuItemView is a phantom class!
+Warning: android.webkit.android.support.v7.view.menu.ActionMenuItemView is a phantom class!
+Found 34 layout controls in file res/layout/abc_action_menu_item_layout.xml
+Warning: com.example.asif.myapplication.android.support.v7.widget.ActionMenuView is a phantom class!
+Warning: android.view.android.support.v7.widget.ActionMenuView is a phantom class!
+Warning: android.widget.android.support.v7.widget.ActionMenuView is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ActionMenuView is a phantom class!
+Found 34 layout controls in file res/layout/abc_action_menu_layout.xml
+Found 34 layout controls in file res/layout/abc_action_mode_bar.xml
+Could not find layout class android.support.v7.widget.ButtonBarLayout
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.view.menu.ActionMenuItemView
+Could not find layout class android.support.v7.widget.ActionMenuView
+Could not find layout class android.support.v7.widget.ActionBarContextView
+Found 35 layout controls in file res/layout/abc_action_mode_close_item_material.xml
+Found 36 layout controls in file res/layout/abc_activity_chooser_view.xml
+Found 37 layout controls in file res/layout/abc_activity_chooser_view_list_item.xml
+Found 38 layout controls in file res/layout/abc_alert_dialog_button_bar_material.xml
+Warning: com.example.asif.myapplication.android.support.v7.widget.AlertDialogLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.AlertDialogLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.AlertDialogLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.AlertDialogLayout is a phantom class!
+Could not find layout class view
+Could not find layout class android.support.v7.widget.ButtonBarLayout
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.widget.AlertDialogLayout
+Warning: View is a phantom class!
+Warning: com.example.asif.myapplication.View is a phantom class!
+Warning: com.example.asif.myapplication.android.support.v4.widget.NestedScrollView is a phantom class!
+Warning: android.view.android.support.v4.widget.NestedScrollView is a phantom class!
+Warning: android.widget.android.support.v4.widget.NestedScrollView is a phantom class!
+Warning: android.webkit.android.support.v4.widget.NestedScrollView is a phantom class!
+Could not find layout class android.support.v4.widget.NestedScrollView
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.widget.DialogTitle
+Could not find layout class android.support.v4.widget.Space
+Could not find layout class android.support.v7.widget.FitWindowsLinearLayout
+Could not find layout class android.support.v7.view.menu.ExpandedMenuView
+Found 39 layout controls in file res/layout/abc_alert_dialog_material.xml
+Found 40 layout controls in file res/layout/abc_alert_dialog_title_material.xml
+Found 41 layout controls in file res/layout/abc_dialog_title_material.xml
+Warning: com.example.asif.myapplication.android.support.v7.view.menu.ExpandedMenuView is a phantom class!
+Warning: android.view.android.support.v7.view.menu.ExpandedMenuView is a phantom class!
+Warning: android.widget.android.support.v7.view.menu.ExpandedMenuView is a phantom class!
+Warning: android.webkit.android.support.v7.view.menu.ExpandedMenuView is a phantom class!
+Found 41 layout controls in file res/layout/abc_expanded_menu_layout.xml
+Warning: CheckBox is a phantom class!
+Warning: com.example.asif.myapplication.CheckBox is a phantom class!
+Warning: android.view.CheckBox is a phantom class!
+Found 42 layout controls in file res/layout/abc_list_menu_item_checkbox.xml
+Could not find layout class android.support.v7.view.menu.ListMenuItemView
+Found 43 layout controls in file res/layout/abc_list_menu_item_icon.xml
+Found 44 layout controls in file res/layout/abc_list_menu_item_layout.xml
+Warning: RadioButton is a phantom class!
+Warning: com.example.asif.myapplication.RadioButton is a phantom class!
+Warning: android.view.RadioButton is a phantom class!
+Could not find layout class android.support.v7.view.menu.ListMenuItemView
+Could not find layout class android.support.v7.widget.ContentFrameLayout
+Could not find layout class android.support.v7.widget.FitWindowsLinearLayout
+Could not find layout class android.support.v7.widget.ViewStubCompat
+Could not find layout class android.support.v7.widget.FitWindowsFrameLayout
+Could not find layout class android.support.v7.widget.ViewStubCompat
+Could not find layout class android.support.v7.widget.ActionBarOverlayLayout
+Could not find layout class android.support.v7.widget.ActionBarContainer
+Could not find layout class android.support.v7.widget.Toolbar
+Could not find layout class android.support.v7.widget.ActionBarContextView
+Found 45 layout controls in file res/layout/abc_list_menu_item_radio.xml
+Found 46 layout controls in file res/layout/abc_popup_menu_header_item_layout.xml
+Found 47 layout controls in file res/layout/abc_popup_menu_item_layout.xml
+Warning: com.example.asif.myapplication.android.support.v7.widget.ContentFrameLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.ContentFrameLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.ContentFrameLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ContentFrameLayout is a phantom class!
+Found 47 layout controls in file res/layout/abc_screen_content_include.xml
+Warning: com.example.asif.myapplication.android.support.v7.widget.ViewStubCompat is a phantom class!
+Warning: android.view.android.support.v7.widget.ViewStubCompat is a phantom class!
+Warning: android.widget.android.support.v7.widget.ViewStubCompat is a phantom class!
+Warning: android.webkit.android.support.v7.widget.ViewStubCompat is a phantom class!
+Found 47 layout controls in file res/layout/abc_screen_simple.xml
+Warning: com.example.asif.myapplication.android.support.v7.widget.FitWindowsFrameLayout is a phantom class!
+Warning: android.view.android.support.v7.widget.FitWindowsFrameLayout is a phantom class!
+Warning: android.widget.android.support.v7.widget.FitWindowsFrameLayout is a phantom class!
+Warning: android.webkit.android.support.v7.widget.FitWindowsFrameLayout is a phantom class!
+Found 47 layout controls in file res/layout/abc_screen_simple_overlay_action_mode.xml
+Found 47 layout controls in file res/layout/abc_screen_toolbar.xml
+Could not find layout class view
+Could not find layout class view
+Found 48 layout controls in file res/layout/abc_search_dropdown_item_icons_2line.xml
+Found 49 layout controls in file res/layout/abc_search_view.xml
+Found 49 layout controls in file res/layout/abc_select_dialog_material.xml
+Warning: ListView is a phantom class!
+Warning: com.example.asif.myapplication.ListView is a phantom class!
+Warning: android.view.ListView is a phantom class!
+Found 50 layout controls in file res/layout/activity_sms.xml
+Found 51 layout controls in file res/layout/notification_action.xml
+Found 52 layout controls in file res/layout/notification_action_tombstone.xml
+Found 53 layout controls in file res/layout/notification_template_custom_big.xml
+Found 54 layout controls in file res/layout/notification_template_icon_group.xml
+Found 55 layout controls in file res/layout/notification_template_lines_media.xml
+Found 56 layout controls in file res/layout/notification_template_media.xml
+Found 57 layout controls in file res/layout/notification_template_media_custom.xml
+Found 58 layout controls in file res/layout/notification_template_part_chronometer.xml
+Found 58 layout controls in file res/layout/notification_template_part_time.xml
+Found 59 layout controls in file res/layout/select_dialog_item_material.xml
+Found 60 layout controls in file res/layout/select_dialog_multichoice_material.xml
+Found 61 layout controls in file res/layout/select_dialog_singlechoice_material.xml
+Found 62 layout controls in file res/layout/support_simple_spinner_dropdown_item.xml
+Could not find layout class DateTimeView
+Could not find layout class DateTimeView
+Could not find layout class DateTimeView
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: android.app.Notification$DecoratedCustomViewStyle is a phantom class!
+Warning: android.app.Notification$DecoratedMediaCustomViewStyle is a phantom class!
+Warning: android.app.Notification$MessagingStyle$Message is a phantom class!
+Warning: android.app.Notification$MessagingStyle is a phantom class!
+Warning: android.app.SharedElementCallback$OnSharedElementsReadyListener is a phantom class!
+Warning: android.app.VoiceInteractor is a phantom class!
+Warning: android.app.assist.AssistContent is a phantom class!
+Warning: android.graphics.drawable.Animatable2$AnimationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationResult is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$CryptoObject is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager is a phantom class!
+Warning: android.media.browse.MediaBrowser$ItemCallback is a phantom class!
+Warning: android.view.SearchEvent is a phantom class!
+Warning: android.view.DragAndDropPermissions is a phantom class!
+Warning: android.view.PointerIcon is a phantom class!
+Warning: android.widget.ThemedSpinnerAdapter is a phantom class!
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Context
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Intent
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.widget.AdapterView
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.view.View
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.ComponentCallbacks
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.app.Application$ActivityLifecycleCallbacks
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.app.Application$OnProvideAssistDataListener
+[main] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.android.tools.fd.runtime.BootstrapApplication $r1;
+        com.example.asif.myapplication.SmsActivity $r2;
+        com.example.asif.myapplication.SmsBroadcastReceiver $r3;
+        android.content.Context $r4;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+        $r1 = new com.android.tools.fd.runtime.BootstrapApplication;
+
+        specialinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void <init>()>();
+
+     label01:
+        if $i0 == 5 goto label02;
+
+        $r2 = new com.example.asif.myapplication.SmsActivity;
+
+        specialinvoke $r2.<com.example.asif.myapplication.SmsActivity: void <init>()>();
+
+     label02:
+        if $i0 == 10 goto label01;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void onCreate()>();
+
+        <il.ac.tau.MyApplicationHolder: android.app.Application application> = $r1;
+
+     label03:
+        if $i0 == 11 goto label05;
+
+        $r3 = new com.example.asif.myapplication.SmsBroadcastReceiver;
+
+        specialinvoke $r3.<com.example.asif.myapplication.SmsBroadcastReceiver: void <init>()>();
+
+        if $i0 == 12 goto label05;
+
+     label04:
+        virtualinvoke $r3.<com.example.asif.myapplication.SmsBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 14 goto label04;
+
+     label05:
+        if $i0 == 18 goto label11;
+
+        if $i0 == 19 goto label11;
+
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsActivity: void onCreate(android.os.Bundle)>(null);
+
+     label06:
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsActivity: void onStart()>();
+
+     label07:
+        if $i0 == 21 goto label10;
+
+     label08:
+        if $i0 == 22 goto label09;
+
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>(null, null, 0, 0L);
+
+     label09:
+        if $i0 == 23 goto label08;
+
+     label10:
+        if $i0 == 24 goto label07;
+
+        if $i0 == 25 goto label11;
+
+        if $i0 == 26 goto label06;
+
+     label11:
+        if $i0 == 28 goto label12;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void registerComponentCallbacks(android.content.ComponentCallbacks)>(null);
+
+     label12:
+        if $i0 == 29 goto label13;
+
+        $r4 = virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: android.content.Context createPackageContext(java.lang.String,int)>("", 0);
+
+     label13:
+        if $i0 == 30 goto label14;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void unregisterComponentCallbacks(android.content.ComponentCallbacks)>(null);
+
+     label14:
+        if $i0 == 31 goto label15;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void registerActivityLifecycleCallbacks(android.app.Application$ActivityLifecycleCallbacks)>(null);
+
+     label15:
+        if $i0 == 32 goto label16;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void attachBaseContext(android.content.Context)>(null);
+
+     label16:
+        if $i0 == 33 goto label17;
+
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>(null, null, 0, 0L);
+
+     label17:
+        if $i0 == 34 goto label18;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void unregisterOnProvideAssistDataListener(android.app.Application$OnProvideAssistDataListener)>(null);
+
+     label18:
+        if $i0 == 35 goto label19;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void unregisterActivityLifecycleCallbacks(android.app.Application$ActivityLifecycleCallbacks)>(null);
+
+     label19:
+        if $i0 == 36 goto label20;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void registerOnProvideAssistDataListener(android.app.Application$OnProvideAssistDataListener)>(null);
+
+     label20:
+        if $i0 == 37 goto label11;
+
+        if $i0 == 38 goto label03;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.9 seconds.
+[Spark] Solution found in 0.9 seconds.
+Running incremental callback analysis for 3 components...
+Incremental callback analysis done.
+Found 13 callback methods for 3 components
+Found {res/layout/notification_action.xml=[2131427418 - android.widget.ImageView, 2131427419 - android.widget.TextView, 2131427417 - android.widget.LinearLayout], res/layout/notification_template_icon_group.xml=[2131427372 - android.widget.ImageView], res/layout/notification_template_custom_big.xml=[2131427372 - android.widget.ImageView, 2131427431 - android.widget.ImageView, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, 2131427425 - android.widget.LinearLayout, -1 - android.widget.LinearLayout, 2131427430 - android.widget.TextView], res/layout-v17/notification_template_media_custom.xml=[2131427439 - android.widget.ImageView, 2131427429 - android.widget.Chronometer, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView, 2131427422 - android.widget.LinearLayout, 2131427423 - android.widget.LinearLayout], res/layout-v17/select_dialog_singlechoice_material.xml=[16908308 - android.widget.CheckedTextView], res/layout-v11/notification_media_cancel_action.xml=[2131427421 - android.widget.ImageButton], res/layout-v17/notification_template_big_media_narrow_custom.xml=[2131427422 - android.widget.RelativeLayout, 2131427372 - android.widget.ImageView, 2131427424 - android.widget.ImageView, 2131427429 - android.widget.Chronometer, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView, 2131427423 - android.widget.LinearLayout], res/layout-v17/notification_action.xml=[2131427418 - android.widget.ImageView, 2131427419 - android.widget.TextView, 2131427417 - android.widget.LinearLayout], res/layout-v17/notification_template_custom_big.xml=[2131427433 - android.widget.LinearLayout, 2131427432 - android.widget.FrameLayout, 2131427372 - android.widget.ImageView, 2131427428 - android.view.ViewStub, 2131427431 - android.widget.ImageView, 2131427429 - android.view.ViewStub, 2131427424 - android.widget.ImageView, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, -1 - android.widget.LinearLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView], res/layout-v21/notification_action_tombstone.xml=[2131427418 - android.widget.ImageView, 2131427419 - android.widget.TextView, 2131427417 - android.widget.LinearLayout], res/layout/abc_action_bar_view_list_nav_layout.xml=[-1 - android.widget.LinearLayout], res/layout/abc_popup_menu_item_layout.xml=[2131427373 - android.widget.TextView, -1 - android.widget.RelativeLayout, 2131427391 - android.widget.TextView, 2131427393 - android.widget.ImageView], res/layout-v11/notification_media_action.xml=[2131427420 - android.widget.ImageButton], res/layout-v16/notification_template_custom_big.xml=[2131427433 - android.widget.LinearLayout, 2131427432 - android.widget.FrameLayout, 2131427372 - android.widget.ImageView, 2131427428 - android.view.ViewStub, 2131427431 - android.widget.ImageView, 2131427429 - android.view.ViewStub, 2131427424 - android.widget.ImageView, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, -1 - android.widget.LinearLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView], res/layout-v21/notification_action.xml=[2131427418 - android.widget.ImageView, 2131427419 - android.widget.TextView, 2131427417 - android.widget.LinearLayout], res/layout/notification_template_part_chronometer.xml=[2131427429 - android.widget.Chronometer], res/layout/abc_alert_dialog_button_bar_material.xml=[2131427374 - android.widget.ScrollView, 16908314 - android.widget.Button, 16908315 - android.widget.Button, 16908313 - android.widget.Button], res/layout/abc_dialog_title_material.xml=[2131427373 - android.widget.TextView], res/layout/abc_alert_dialog_title_material.xml=[16908294 - android.widget.ImageView, 2131427386 - android.widget.LinearLayout, 2131427385 - android.widget.LinearLayout], res/layout-v17/notification_template_big_media_custom.xml=[2131427422 - android.widget.RelativeLayout, 2131427424 - android.widget.ImageView, 2131427429 - android.widget.Chronometer, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView, 2131427423 - android.widget.LinearLayout], res/layout/activity_sms.xml=[2131427415 - android.widget.TextView, 2131427416 - android.widget.ListView, 2131427414 - android.widget.LinearLayout], res/layout/notification_template_media_custom.xml=[2131427439 - android.widget.ImageView, 2131427429 - android.widget.Chronometer, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView, 2131427422 - android.widget.LinearLayout, 2131427423 - android.widget.LinearLayout], res/layout-v17/abc_alert_dialog_button_bar_material.xml=[2131427374 - android.widget.ScrollView, 16908314 - android.widget.Button, 16908315 - android.widget.Button, 16908313 - android.widget.Button], res/layout/select_dialog_singlechoice_material.xml=[16908308 - android.widget.CheckedTextView], res/layout/select_dialog_item_material.xml=[16908308 - android.widget.TextView], res/layout-v17/abc_action_mode_close_item_material.xml=[2131427366 - android.widget.ImageView], res/layout/select_dialog_multichoice_material.xml=[16908308 - android.widget.CheckedTextView], res/layout/abc_alert_dialog_material.xml=[2131427384 - android.widget.FrameLayout, 2131427377 - android.widget.FrameLayout, 2131427383 - android.widget.FrameLayout, 16908299 - android.widget.TextView, 2131427378 - android.view.View, -1 - android.widget.LinearLayout, 2131427382 - android.view.View], res/layout-v17/notification_template_media.xml=[2131427439 - android.widget.ImageView, 2131427422 - android.widget.LinearLayout, 2131427423 - android.widget.LinearLayout], res/layout-v17/abc_popup_menu_header_item_layout.xml=[16908310 - android.widget.TextView, -1 - android.widget.FrameLayout], res/layout/abc_action_mode_close_item_material.xml=[2131427366 - android.widget.ImageView], res/layout/abc_search_dropdown_item_icons_2line.xml=[-1 - android.widget.RelativeLayout, 16908295 - android.widget.ImageView, 16908296 - android.widget.ImageView, 16908308 - android.widget.TextView, 2131427401 - android.widget.ImageView, 16908309 - android.widget.TextView], res/layout-v17/notification_action_tombstone.xml=[2131427418 - android.widget.ImageView, 2131427419 - android.widget.TextView, 2131427417 - android.widget.LinearLayout], res/layout-v17/abc_search_view.xml=[2131427410 - android.widget.LinearLayout, 2131427406 - android.widget.ImageView, 2131427409 - android.widget.ImageView, 2131427402 - android.widget.LinearLayout, 2131427407 - android.widget.LinearLayout, 2131427404 - android.widget.ImageView, 2131427405 - android.widget.LinearLayout, 2131427403 - android.widget.TextView, 2131427411 - android.widget.ImageView, 2131427412 - android.widget.ImageView], res/layout-v17/notification_template_big_media.xml=[2131427422 - android.widget.RelativeLayout, 2131427424 - android.widget.ImageView, 2131427423 - android.widget.LinearLayout], res/layout-v17/abc_popup_menu_item_layout.xml=[2131427373 - android.widget.TextView, -1 - android.widget.RelativeLayout, 2131427391 - android.widget.TextView, 2131427393 - android.widget.ImageView], res/layout-v22/abc_alert_dialog_button_bar_material.xml=[2131427374 - android.widget.ScrollView, 16908314 - android.widget.Button, 16908315 - android.widget.Button, 16908313 - android.widget.Button], res/layout-v11/notification_template_big_media_narrow_custom.xml=[2131427422 - android.widget.RelativeLayout, 2131427372 - android.widget.ImageView, 2131427424 - android.widget.ImageView, 2131427429 - android.widget.Chronometer, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView, 2131427423 - android.widget.LinearLayout], res/layout-v17/abc_alert_dialog_title_material.xml=[16908294 - android.widget.ImageView, 2131427386 - android.widget.LinearLayout, 2131427385 - android.widget.LinearLayout], res/layout/abc_list_menu_item_layout.xml=[2131427373 - android.widget.TextView, -1 - android.widget.RelativeLayout, 2131427391 - android.widget.TextView], res/layout-v21/notification_template_custom_big.xml=[2131427433 - android.widget.LinearLayout, 2131427432 - android.widget.FrameLayout, 2131427428 - android.view.ViewStub, 2131427429 - android.view.ViewStub, 2131427424 - android.widget.ImageView, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, -1 - android.widget.LinearLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView], res/layout/abc_list_menu_item_checkbox.xml=[2131427390 - android.widget.CheckBox], res/layout/abc_popup_menu_header_item_layout.xml=[16908310 - android.widget.TextView, -1 - android.widget.FrameLayout], res/layout-v17/notification_template_big_media_narrow.xml=[2131427422 - android.widget.RelativeLayout, 2131427372 - android.widget.ImageView, 2131427424 - android.widget.ImageView, 2131427423 - android.widget.LinearLayout], res/layout-v17/notification_template_lines_media.xml=[2131427373 - android.widget.TextView, 2131427438 - android.widget.TextView, 2131427435 - android.widget.LinearLayout, 2131427437 - android.widget.LinearLayout, 2131427429 - android.widget.Chronometer, 2131427436 - android.widget.TextView, -1 - android.widget.LinearLayout, 2131427430 - android.widget.TextView], res/layout/abc_list_menu_item_radio.xml=[2131427392 - android.widget.RadioButton], res/layout-v11/notification_template_big_media_narrow.xml=[2131427422 - android.widget.RelativeLayout, 2131427372 - android.widget.ImageView, 2131427424 - android.widget.ImageView, 2131427423 - android.widget.LinearLayout], res/layout-v17/abc_dialog_title_material.xml=[2131427373 - android.widget.TextView], res/layout/abc_activity_chooser_view.xml=[2131427369 - android.widget.ImageView, 2131427368 - android.widget.FrameLayout, 2131427370 - android.widget.FrameLayout], res/layout/notification_action_tombstone.xml=[2131427418 - android.widget.ImageView, 2131427419 - android.widget.TextView, 2131427417 - android.widget.LinearLayout], res/layout-v17/select_dialog_multichoice_material.xml=[16908308 - android.widget.CheckedTextView], res/layout/abc_action_bar_up_container.xml=[-1 - android.widget.LinearLayout], res/layout-v21/notification_template_icon_group.xml=[2131427372 - android.widget.ImageView, 2131427431 - android.widget.ImageView, 2131427434 - android.widget.FrameLayout], res/layout/abc_search_view.xml=[2131427410 - android.widget.LinearLayout, 2131427406 - android.widget.ImageView, 2131427409 - android.widget.ImageView, 2131427402 - android.widget.LinearLayout, 2131427407 - android.widget.LinearLayout, 2131427404 - android.widget.ImageView, 2131427405 - android.widget.LinearLayout, 2131427403 - android.widget.TextView, 2131427411 - android.widget.ImageView, 2131427412 - android.widget.ImageView], res/layout/abc_activity_chooser_view_list_item.xml=[2131427373 - android.widget.TextView, 2131427372 - android.widget.ImageView, 2131427371 - android.widget.LinearLayout, -1 - android.widget.LinearLayout], res/layout/notification_template_media.xml=[2131427439 - android.widget.ImageView, 2131427422 - android.widget.LinearLayout, 2131427423 - android.widget.LinearLayout], res/layout/notification_template_lines_media.xml=[2131427373 - android.widget.TextView, 2131427438 - android.widget.TextView, 2131427435 - android.widget.LinearLayout, 2131427437 - android.widget.LinearLayout, 2131427429 - android.widget.Chronometer, 2131427436 - android.widget.TextView, -1 - android.widget.LinearLayout, 2131427430 - android.widget.TextView], res/layout-v11/notification_template_big_media.xml=[2131427422 - android.widget.RelativeLayout, 2131427424 - android.widget.ImageView, 2131427423 - android.widget.LinearLayout], res/layout/abc_action_bar_title_item.xml=[2131427364 - android.widget.TextView, 2131427365 - android.widget.TextView, -1 - android.widget.LinearLayout], res/layout/support_simple_spinner_dropdown_item.xml=[16908308 - android.widget.TextView], res/layout-v11/notification_template_big_media_custom.xml=[2131427422 - android.widget.RelativeLayout, 2131427424 - android.widget.ImageView, 2131427429 - android.widget.Chronometer, 2131427427 - android.widget.FrameLayout, 2131427426 - android.widget.FrameLayout, 2131427425 - android.widget.LinearLayout, 2131427430 - android.widget.TextView, 2131427423 - android.widget.LinearLayout], res/layout/abc_list_menu_item_icon.xml=[2131427372 - android.widget.ImageView]} layout controls
+Entry point calculation done.
+Created a SourceSinkManager with 89 sources, 133 sinks, and 13 callback methods.
+Using 'android.jar' as android.jar
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: android.app.Notification$DecoratedCustomViewStyle is a phantom class!
+Warning: android.app.Notification$DecoratedMediaCustomViewStyle is a phantom class!
+Warning: android.app.Notification$MessagingStyle$Message is a phantom class!
+Warning: android.app.Notification$MessagingStyle is a phantom class!
+Warning: android.app.SharedElementCallback$OnSharedElementsReadyListener is a phantom class!
+Warning: android.app.VoiceInteractor is a phantom class!
+Warning: android.app.assist.AssistContent is a phantom class!
+Warning: android.graphics.drawable.Animatable2$AnimationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationCallback is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$AuthenticationResult is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager$CryptoObject is a phantom class!
+Warning: android.hardware.fingerprint.FingerprintManager is a phantom class!
+Warning: android.media.browse.MediaBrowser$ItemCallback is a phantom class!
+Warning: android.view.SearchEvent is a phantom class!
+Warning: android.view.DragAndDropPermissions is a phantom class!
+Warning: android.view.PointerIcon is a phantom class!
+Warning: android.widget.ThemedSpinnerAdapter is a phantom class!
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot create valid constructor for android.content.Context, because it is abstract and cannot substitute with subclass
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot create valid constructor for android.widget.AdapterView, because it is abstract and cannot substitute with subclass
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot create valid constructor for android.content.ComponentCallbacks, because it is an interface and cannot substitute with subclass
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot create valid constructor for android.app.Application$ActivityLifecycleCallbacks, because it is an interface and cannot substitute with subclass
+[main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot create valid constructor for android.app.Application$OnProvideAssistDataListener, because it is an interface and cannot substitute with subclass
+[main] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.android.tools.fd.runtime.BootstrapApplication $r1;
+        com.example.asif.myapplication.SmsActivity $r2;
+        com.example.asif.myapplication.SmsBroadcastReceiver $r3;
+        android.content.Intent $r4;
+        android.os.Bundle $r5;
+        android.view.View $r6, $r8;
+        android.content.Context $r7;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+        $r1 = new com.android.tools.fd.runtime.BootstrapApplication;
+
+        specialinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void <init>()>();
+
+     label01:
+        if $i0 == 5 goto label02;
+
+        $r2 = new com.example.asif.myapplication.SmsActivity;
+
+        specialinvoke $r2.<com.example.asif.myapplication.SmsActivity: void <init>()>();
+
+     label02:
+        if $i0 == 10 goto label01;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void onCreate()>();
+
+        <il.ac.tau.MyApplicationHolder: android.app.Application application> = $r1;
+
+     label03:
+        if $i0 == 11 goto label05;
+
+        $r3 = new com.example.asif.myapplication.SmsBroadcastReceiver;
+
+        specialinvoke $r3.<com.example.asif.myapplication.SmsBroadcastReceiver: void <init>()>();
+
+        if $i0 == 12 goto label05;
+
+        $r4 = new android.content.Intent;
+
+        specialinvoke $r4.<android.content.Intent: void <init>()>();
+
+     label04:
+        virtualinvoke $r3.<com.example.asif.myapplication.SmsBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, $r4);
+
+        $r4 = null;
+
+        if $i0 == 14 goto label04;
+
+     label05:
+        if $i0 == 18 goto label11;
+
+        if $i0 == 19 goto label11;
+
+        $r5 = new android.os.Bundle;
+
+        specialinvoke $r5.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsActivity: void onCreate(android.os.Bundle)>($r5);
+
+        $r5 = null;
+
+     label06:
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsActivity: void onStart()>();
+
+     label07:
+        if $i0 == 21 goto label10;
+
+     label08:
+        if $i0 == 22 goto label09;
+
+        $r6 = new android.view.View;
+
+        specialinvoke $r6.<android.view.View: void <init>(android.content.Context)>($r2);
+
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>(null, $r6, 0, 0L);
+
+        $r6 = null;
+
+     label09:
+        if $i0 == 23 goto label08;
+
+     label10:
+        if $i0 == 24 goto label07;
+
+        if $i0 == 25 goto label11;
+
+        if $i0 == 26 goto label06;
+
+     label11:
+        if $i0 == 28 goto label12;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void registerComponentCallbacks(android.content.ComponentCallbacks)>(null);
+
+     label12:
+        if $i0 == 29 goto label13;
+
+        $r7 = virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: android.content.Context createPackageContext(java.lang.String,int)>("", 0);
+
+     label13:
+        if $i0 == 30 goto label14;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void unregisterComponentCallbacks(android.content.ComponentCallbacks)>(null);
+
+     label14:
+        if $i0 == 31 goto label15;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void registerActivityLifecycleCallbacks(android.app.Application$ActivityLifecycleCallbacks)>(null);
+
+     label15:
+        if $i0 == 32 goto label16;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void attachBaseContext(android.content.Context)>(null);
+
+     label16:
+        if $i0 == 33 goto label17;
+
+        $r8 = new android.view.View;
+
+        specialinvoke $r8.<android.view.View: void <init>(android.content.Context)>(null);
+
+        virtualinvoke $r2.<com.example.asif.myapplication.SmsActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>(null, $r8, 0, 0L);
+
+        $r8 = null;
+
+     label17:
+        if $i0 == 34 goto label18;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void unregisterOnProvideAssistDataListener(android.app.Application$OnProvideAssistDataListener)>(null);
+
+     label18:
+        if $i0 == 35 goto label19;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void unregisterActivityLifecycleCallbacks(android.app.Application$ActivityLifecycleCallbacks)>(null);
+
+     label19:
+        if $i0 == 36 goto label20;
+
+        virtualinvoke $r1.<com.android.tools.fd.runtime.BootstrapApplication: void registerOnProvideAssistDataListener(android.app.Application$OnProvideAssistDataListener)>(null);
+
+     label20:
+        if $i0 == 37 goto label11;
+
+        if $i0 == 38 goto label03;
+
+        return;
+    }
+
+Jun 04, 2017 11:15:46 PM Main.java.Config init
+INFO: initialization finished...
+Jun 04, 2017 11:15:46 PM Main.java.Config init
+INFO: [input]/home/asif/MTP/Experiments/apimonitor/APIMonitor-beta/apks_old/Read_SMS.apk, [output]output/APK_CG [processedFile]/home/asif/MTP/Experiments/apimonitor/APIMonitor-beta/logs/ReadSMS.log [sensitive_api_file]sensitive_apis.txt [global_output_api_file]global_output_apis.txt
+com.example.asif.myapplication
+com.example.asif.myapplication
+Reading log file
+V/DroidBox(16416): Lcom/android/tools/fd/runtime/BootstrapApplication$1;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V->Landroid/util/Log;->e(Ljava/lang/String;=InstantRun | Ljava/lang/String;=Could not find slices in APK; aborting.)I=52
+parts: Lcom/android/tools/fd/runtime/BootstrapApplication$1;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V->Landroid/util/Log;->e(Ljava/lang/String;=InstantRun | Ljava/lang/String;=Could not find slices in APK; aborting.)I=52
+partSplit: Lcom/android/tools/fd/runtime/BootstrapApplication$1; log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V Landroid/util/Log;e(Ljava/lang/String;=InstantRun | Ljava/lang/String;=Could not find slices in APK; aborting.)I=52
+ Lcom/android/tools/fd/runtime/BootstrapApplication$1;
+V/DroidBox(16416): Lcom/example/asif/myapplication/SmsActivity;->onCreate(Landroid/os/Bundle;)V->Lcom/example/asif/myapplication/SmsActivity;->findViewById(I=2131427416)Landroid/view/View;=android.widget.ListView@414c95e0
+parts: Lcom/example/asif/myapplication/SmsActivity;->onCreate(Landroid/os/Bundle;)V->Lcom/example/asif/myapplication/SmsActivity;->findViewById(I=2131427416)Landroid/view/View;=android.widget.ListView@414c95e0
+partSplit: Lcom/example/asif/myapplication/SmsActivity; onCreate(Landroid/os/Bundle;)V Lcom/example/asif/myapplication/SmsActivity;findViewById(I=2131427416)Landroid/view/View;=android.widget.ListView@414c95e0
+ Lcom/example/asif/myapplication/SmsActivity;
+V/DroidBox(16416): Lcom/example/asif/myapplication/SmsActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/net/Uri;->parse(Ljava/lang/String;=content://sms/inbox)Landroid/net/Uri;=content://sms/inbox
+parts: Lcom/example/asif/myapplication/SmsActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/net/Uri;->parse(Ljava/lang/String;=content
+partSplit: Lcom/example/asif/myapplication/SmsActivity; onCreate(Landroid/os/Bundle;)V Landroid/net/Uri;parse(Ljava/lang/String;=content
+V/DroidBox(16416): Lcom/example/asif/myapplication/SmsActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/content/ContentResolver;->query(Landroid/net/Uri;=content://sms/inbox | [Ljava/lang/String;=null | Ljava/lang/String;=null | [Ljava/lang/String;=null | Ljava/lang/String;=null)Landroid/database/Cursor;=android.content.ContentResolver$CursorWrapperInner@414cdd40
+parts: Lcom/example/asif/myapplication/SmsActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/content/ContentResolver;->query(Landroid/net/Uri;=content
+partSplit: Lcom/example/asif/myapplication/SmsActivity; onCreate(Landroid/os/Bundle;)V Landroid/content/ContentResolver;query(Landroid/net/Uri;=content
+V/DroidBox(16416): Lcom/example/asif/myapplication/SmsActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/util/Log;->d(Ljava/lang/String;=SMSOutput | Ljava/lang/String;=SMS From: +16505556789\nDon't forget the marshmallows!\n)I=66
+parts: Lcom/example/asif/myapplication/SmsActivity;->onCreate(Landroid/os/Bundle;)V->Landroid/util/Log;->d(Ljava/lang/String;=SMSOutput | Ljava/lang/String;=SMS From
+partSplit: Lcom/example/asif/myapplication/SmsActivity; onCreate(Landroid/os/Bundle;)V Landroid/util/Log;d(Ljava/lang/String;=SMSOutput | Ljava/lang/String;=SMS From
+Reading sensitiveApi file
+sensitive_apis.txt
+Landroid/location/Location;
+Landroid/location/Location;->getLongitude
+Landroid/location/LocationManager;->getLastKnownLocation
+Landroid/location/LocationManager;->requestLocationUpdates
+Landroid/content/ContentResolver;
+Landroid/content/ContentResolver;->query
+Reading global output file
+Landroid/util/Log;->d
+Landroid/widget/Toast;->makeText
+Ljava/io/OutputStreamWriter;->write
+package namecom.example.asif.myapplication
+className com.example.asif.myapplication.BuildConfig
+<clinit>
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$anim
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$attr
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$bool
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$color
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$dimen
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$drawable
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$id
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$integer
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$layout
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$mipmap
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$string
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$style
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.R$styleable
+<clinit>
+<init>
+<init>
+access$super
+className com.example.asif.myapplication.SmsActivity
+<init>
+<init>
+access$super
+instance
+onCreate
+onItemClick
+onStart
+className com.example.asif.myapplication.SmsBroadcastReceiver
+<init>
+<init>
+access$super
+onReceive
+saveLabel: S1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+---------------------------------------------------
+ Lcom/android/tools/fd/runtime/BootstrapApplication$1;.log.Landroid/util/Log;
+---------------------------------------------------
+---------------------------------------------------
+ Lcom/example/asif/myapplication/SmsActivity;.onCreate.Lcom/example/asif/myapplication/SmsActivity;
+---------------------------------------------------
+$r0
+$r1
+$r2
+$r3
+$r4
+$r5
+$r6
+$r7
+$r8
+$r9
+$r10
+$i0
+$i1
+$z0
+$r11
+$r12
+$r0 := @this: com.example.asif.myapplication.SmsActivity
+Identity Statement
+saveLabel: dummyLabellabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r0label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r1 := @parameter0: android.os.Bundle
+Identity Statement
+saveLabel: dummyLabellabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r1 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r2 = <com.example.asif.myapplication.SmsActivity: com.android.tools.fd.runtime.IncrementalChange $change>
+Assignment Statment
+Assignment + else
+com.android.tools.fd.runtime.IncrementalChange
+saveLabel: dummyLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r2 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+if $r2 == null goto specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
+$r2 == null
+Check and Def $r2 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r3 = newarray (java.lang.Object)[2]
+Assignment Statment
+Assignment + else
+java.lang.Object[]
+saveLabel: dummyLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r3 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r3label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r3[0] = $r0
+Assignment Statment
+Check for subject label and assign sublabel to lo
+Check and Def $r0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r3 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r3[1] = $r1
+Assignment Statment
+Check for subject label and assign sublabel to lo
+Check and Def $r1 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r3 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+interfaceinvoke $r2.<com.android.tools.fd.runtime.IncrementalChange: java.lang.Object access$dispatch(java.lang.String,java.lang.Object[])>("onCreate.(Landroid/os/Bundle;)V", $r3)
+Interfaceinvoke
+Class :com.android.tools.fd.runtime.IncrementalChange method :access$dispatch
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+"onCreate.(Landroid/os/Bundle;)V"
+$r3
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r2 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+If Return reached return
+specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
+special invoke
+Class :android.app.Activity method :onCreate
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r1
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+virtualinvoke $r0.<com.example.asif.myapplication.SmsActivity: void setContentView(int)>(2130968603)
+virtual invoke
+Class :android.app.Activity method :setContentView
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+2130968603
+Check and Def $r0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r4 = virtualinvoke $r0.<com.example.asif.myapplication.SmsActivity: android.view.View findViewById(int)>(2131427416)
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :android.app.Activity method :findViewById
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+2131427416
+Check and Def $r0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r4 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r4label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r5 = (android.widget.ListView) $r4
+Assignment Statment
+Check and Def $r4 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r5 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r5label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r0.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView> = $r5
+Assignment Statment
+Check for subject label and assign sublabel to lo
+Check and Def $r5 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+obj_idcom.example.asif.myapplication.SmsActivity.onCreate.$r0
+Check and Def $r0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+adding it to fields locals{}
+adding it to fields locals{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r6 = new android.widget.ArrayAdapter
+Assignment Statment
+newExprandroid.widget.ArrayAdapter
+Check and Def new android.widget.ArrayAdapter null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.new android.widget.ArrayAdapterlabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r6 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r6label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r7 = $r0.<com.example.asif.myapplication.SmsActivity: java.util.ArrayList smsMessagesList>
+Assignment Statment
+adding it to fields locals{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>]}
+adding it to fields locals{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>], com.example.asif.myapplication.SmsActivity.onCreate.$r7=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList]}
+saveLabel: dummyPublicLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r7 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r7label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+specialinvoke $r6.<android.widget.ArrayAdapter: void <init>(android.content.Context,int,java.util.List)>($r0, 17367043, $r7)
+special invoke
+Class :android.widget.ArrayAdapter method :<init>
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r0
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+17367043
+$r7
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r6 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r0.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter> = $r6
+Assignment Statment
+Check for subject label and assign sublabel to lo
+Check and Def $r6 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+obj_idcom.example.asif.myapplication.SmsActivity.onCreate.$r0
+Check and Def $r0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r5 = $r0.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>
+Assignment Statment
+adding it to fields locals{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>, com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r7=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList]}
+adding it to fields locals{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>, com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r5=[com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r7=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList]}
+saveLabel: dummyPublicLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r5 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r6 = $r0.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>
+Assignment Statment
+adding it to fields locals{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>, com.example.asif.myapplication.SmsActivity.public android.widget.ArrayAdapter arrayAdapter, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>, com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r5=[com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r7=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList]}
+adding it to fields locals{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>, com.example.asif.myapplication.SmsActivity.public android.widget.ArrayAdapter arrayAdapter, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>, com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r5=[com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r6=[com.example.asif.myapplication.SmsActivity.public android.widget.ArrayAdapter arrayAdapter], com.example.asif.myapplication.SmsActivity.onCreate.$r7=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList]}
+saveLabel: dummyPublicLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r6 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+virtualinvoke $r5.<android.widget.ListView: void setAdapter(android.widget.ListAdapter)>($r6)
+virtual invoke
+Class :android.widget.ListView method :setAdapter
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r6
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r5 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r5 = $r0.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>
+Assignment Statment
+saveLabel: dummyPublicLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r5 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+virtualinvoke $r5.<android.widget.ListView: void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)>($r0)
+virtual invoke
+Class :android.widget.AdapterView method :setOnItemClickListener
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r0
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r5 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r8 = virtualinvoke $r0.<com.example.asif.myapplication.SmsActivity: android.content.ContentResolver getContentResolver()>()
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :android.content.ContextWrapper method :getContentResolver
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r8 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r8label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r9 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>("content://sms/inbox")
+Assignment Statment
+Assignment + InvokeExper
+static invoke
+Class :android.net.Uri method :parse
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+"content://sms/inbox"
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r9 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r9label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r10 = virtualinvoke $r8.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r9, null, null, null, null)
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :android.content.ContentResolver method :query
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r9
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+null
+null
+null
+null
+Check and Def $r8 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+-----------------------------------------------
+Sensitive api :android.content.ContentResolver query
+-----------------------------------------------
+changed subLabel {owner=[com.example.asif.myapplication], readers=[com.example.asif.myapplication], writers=[public, com.example.asif.myapplication]}
+Check and Def $r8 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+checking for private{owner=[com.example.asif.myapplication], readers=[com.example.asif.myapplication], writers=[public, com.example.asif.myapplication]}
+{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>, com.example.asif.myapplication.SmsActivity.public android.widget.ArrayAdapter arrayAdapter, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>, com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r5=[com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r6=[com.example.asif.myapplication.SmsActivity.public android.widget.ArrayAdapter arrayAdapter], com.example.asif.myapplication.SmsActivity.onCreate.$r7=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList]}
+updated obj_label $r8 {owner=[com.example.asif.myapplication], readers=[com.example.asif.myapplication], writers=[public, com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r10 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r10label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$i0 = interfaceinvoke $r10.<android.database.Cursor: int getColumnIndex(java.lang.String)>("body")
+Assignment Statment
+Assignment + InvokeExper
+Interfaceinvoke
+Class :android.database.Cursor method :getColumnIndex
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+"body"
+Check and Def $r10 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $i0 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$i0label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$i1 = interfaceinvoke $r10.<android.database.Cursor: int getColumnIndex(java.lang.String)>("address")
+Assignment Statment
+Assignment + InvokeExper
+Interfaceinvoke
+Class :android.database.Cursor method :getColumnIndex
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+"address"
+Check and Def $r10 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $i1 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$i1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+if $i0 < 0 goto return
+Inside if
+$z0 = interfaceinvoke $r10.<android.database.Cursor: boolean moveToFirst()>()
+Assignment Statment
+Assignment + InvokeExper
+Interfaceinvoke
+Class :android.database.Cursor method :moveToFirst
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r10 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $z0 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$z0label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+if $z0 == 0 goto return
+$z0 == 0
+Check and Def $z0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r6 = $r0.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>
+Assignment Statment
+saveLabel: dummyPublicLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r6 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+virtualinvoke $r6.<android.widget.ArrayAdapter: void clear()>()
+virtual invoke
+Class :android.widget.ArrayAdapter method :clear
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r6 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r11 = new java.lang.StringBuilder
+Assignment Statment
+newExprjava.lang.StringBuilder
+Check and Def new java.lang.StringBuilder null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.new java.lang.StringBuilderlabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r11label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+specialinvoke $r11.<java.lang.StringBuilder: void <init>()>()
+special invoke
+Class :java.lang.StringBuilder method :<init>
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("SMS From: ")
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :java.lang.StringBuilder method :append
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+"SMS From: "
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r12 = interfaceinvoke $r10.<android.database.Cursor: java.lang.String getString(int)>($i1)
+Assignment Statment
+Assignment + InvokeExper
+Interfaceinvoke
+Class :android.database.Cursor method :getString
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$i1
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r10 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r12 null
+saveLabel: dummyLabelcom.example.asif.myapplication.SmsActivityonCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: com.example.asif.myapplication.SmsActivity.onCreate.$r12label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12)
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :java.lang.StringBuilder method :append
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r12
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n")
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :java.lang.StringBuilder method :append
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+"\n"
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r12 = interfaceinvoke $r10.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Assignment Statment
+Assignment + InvokeExper
+Interfaceinvoke
+Class :android.database.Cursor method :getString
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$i0
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r10 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r12 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12)
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :java.lang.StringBuilder method :append
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r12
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n")
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :java.lang.StringBuilder method :append
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+"\n"
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r12 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>()
+Assignment Statment
+Assignment + InvokeExper
+virtual invoke
+Class :java.lang.StringBuilder method :toString
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r11 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r12 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("SMSOutput", $r12)
+static invoke
+Class :android.util.Log method :d
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+"SMSOutput"
+$r12
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside global_output_apis_method
+saveLabel: dummyLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+check write with {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Can write
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$r6 = $r0.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>
+Assignment Statment
+saveLabel: dummyPublicLabel.com.example.asif.myapplication.SmsActivity.onCreatelabel {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r6 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+virtualinvoke $r6.<android.widget.ArrayAdapter: void add(java.lang.Object)>($r12)
+virtual invoke
+Class :android.widget.ArrayAdapter method :add
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+saveLabel: dummyPublicLabel1label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+$r12
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r6 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+$z0 = interfaceinvoke $r10.<android.database.Cursor: boolean moveToNext()>()
+Assignment Statment
+Assignment + InvokeExper
+Interfaceinvoke
+Class :android.database.Cursor method :moveToNext
+arguments
+saveLabel: dummyPublicLabel2label {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $r10 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returning from assignment {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+returned form invokeOnly {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Check and Def $z0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+{owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+if $z0 != 0 goto $r11 = new java.lang.StringBuilder
+$z0 != 0
+Check and Def $z0 {owner=[com.example.asif.myapplication], readers=[public, com.example.asif.myapplication], writers=[com.example.asif.myapplication]}
+Inside if
+If Return reached return
+{com.example.asif.myapplication.SmsActivity.onCreate.$r0=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ArrayAdapter arrayAdapter>, com.example.asif.myapplication.SmsActivity.public android.widget.ArrayAdapter arrayAdapter, com.example.asif.myapplication.SmsActivity.<com.example.asif.myapplication.SmsActivity: android.widget.ListView smsListView>, com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r5=[com.example.asif.myapplication.SmsActivity.public android.widget.ListView smsListView], com.example.asif.myapplication.SmsActivity.onCreate.$r6=[com.example.asif.myapplication.SmsActivity.public android.widget.ArrayAdapter arrayAdapter], com.example.asif.myapplication.SmsActivity.onCreate.$r7=[com.example.asif.myapplication.SmsActivity.public java.util.ArrayList smsMessagesList]}
+[]
+
+Process finished with exit code 0

@@ -1,0 +1,6 @@
+V/DroidBox(  721): Lcom/example/asif/gpstracking/MainActivity;->onCreate(Landroid/os/Bundle;)V->findViewById(I=2131427414)Landroid/view/View;=android.support.v7.widget.AppCompatButton@414f2ba0
+V/DroidBox(  721): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->d(Ljava/lang/String;=Network | Ljava/lang/String;=Network)I=17
+V/DroidBox(  721): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->getLastKnownLocation(Ljava/lang/String;=network)Landroid/location/Location;=null
+V/DroidBox(  736): Lcom/example/asif/gpstracking/MainActivity;->onCreate(Landroid/os/Bundle;)V->findViewById(I=2131427414)Landroid/view/View;=android.support.v7.widget.AppCompatButton@414d6668
+V/DroidBox(  736): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->d(Ljava/lang/String;=Network | Ljava/lang/String;=Network)I=17
+V/DroidBox(  736): Lcom/example/asif/gpstracking/GPSTracker;->getLocation()Landroid/location/Location;->getLastKnownLocation(Ljava/lang/String;=network)Landroid/location/Location;=null

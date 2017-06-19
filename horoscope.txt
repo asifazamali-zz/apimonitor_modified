@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest  xmlns:android="http://schemas.android.com/apk/res/android"
+ android:versionCode="13" android:versionName="8.4" package="com.phoneapp.horoscope2014" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+	</uses-sdk>
+	<uses-permission android:name="android.permission.INTERNET">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+	</uses-permission>
+	<uses-feature android:glEsVersion="0x00020000" android:required="true">
+	</uses-feature>
+	<android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+	</android:uses-permission>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.USE_CREDENTIALS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE">
+	</uses-permission>
+	<application android:theme="@7F0A0035" android:label="@7F080059" android:icon="@7F02007E" android:name="com.phoneapp.horoscope2014.MyApplication" android:allowBackup="true">
+		<meta-data android:name="com.google.android.gms.version" android:value="@7F0C000F">
+		</meta-data>
+		<activity android:label="@7F080059" android:name="com.phoneapp.horoscope2014.MainActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN">
+				</action>
+				<category android:name="android.intent.category.LAUNCHER">
+				</category>
+			</intent-filter>
+		</activity>
+		<activity android:theme="@android:0103000F" android:name="com.google.android.gms.ads.AdActivity" android:configChanges="0x00000FB0">
+		</activity>
+		<activity android:label="@7F0800B5" android:name="com.phoneapp.horoscope2014.activity.ZodiacProfiles">
+		</activity>
+		<activity android:label="@7F0800A9" android:name="com.phoneapp.horoscope2014.activity.SettingActivity">
+		</activity>
+		<activity android:label="@7F0800AC" android:name="com.phoneapp.horoscope2014.activity.TarotDetailActivity">
+		</activity>
+		<activity android:label="@7F0800B3" android:name="com.phoneapp.horoscope2014.activity.ZodiacCompatibilityActivity">
+		</activity>
+		<activity android:label="@7F0800B4" android:name="com.phoneapp.horoscope2014.activity.ZodiacCompatibilityResult">
+		</activity>
+		<activity android:label="@7F0800A6" android:name="com.phoneapp.horoscope2014.activity.ManCompatibilityResult">
+		</activity>
+		<activity android:label="@7F0800A6" android:name="com.phoneapp.horoscope2014.activity.ManCompatibilityActivity">
+		</activity>
+		<activity android:label="@7F0800A6" android:name="com.phoneapp.horoscope2014.activity.WomanCompatibilityActivity">
+		</activity>
+		<activity android:label="@7F0800A6" android:name="com.phoneapp.horoscope2014.activity.WomanCompatibilityResult">
+		</activity>
+		<activity android:label="@7F0800B0" android:name="com.phoneapp.horoscope2014.activity.YearHoroscopeActivity">
+		</activity>
+		<activity android:label="@7F0800AF" android:name="com.phoneapp.horoscope2014.activity.YearChineseActivity">
+		</activity>
+		<activity android:label="@7F0800B2" android:name="com.phoneapp.horoscope2014.activity.YearPredictionActivity">
+		</activity>
+		<activity android:label="@7F0800B1" android:name="com.phoneapp.horoscope2014.activity.YearNumerologyDeatilActivity">
+		</activity>
+		<activity android:label="@7F0800A7" android:name="com.phoneapp.horoscope2014.activity.NumberologyByBirthActivity">
+		</activity>
+		<activity android:label="@7F0800A4" android:name="com.phoneapp.horoscope2014.activity.DailyHoroscopeTabActivity" android:screenOrientation="1">
+		</activity>
+		<receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true">
+			<intent-filter>
+				<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+				</action>
+			</intent-filter>
+		</receiver>
+		<service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false">
+		</service>
+		<receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver" android:exported="true">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER">
+				</action>
+			</intent-filter>
+		</receiver>
+		<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+		</service>
+		<activity android:theme="@7F0A00F5" android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity">
+		</activity>
+		<meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true">
+		</meta-data>
+		<receiver android:name="com.google.android.gms.wallet.EnableWalletOptimizationReceiver" android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.android.gms.wallet.ENABLE_WALLET_OPTIMIZATION">
+				</action>
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>
+
